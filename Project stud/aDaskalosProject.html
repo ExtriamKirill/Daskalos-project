@@ -1,0 +1,1515 @@
+<HTML>
+<STYLE TYPE="TEXT/CSS">
+TABLE.UML {
+	BORDER-WIDTH: 1PX 1PX 1PX 1PX;
+	BORDER-SPACING: 0PX;
+	BORDER-STYLE: SOLID SOLID SOLID SOLID;
+	BORDER-COLOR: BLACK BLACK BLACK BLACK;
+	BORDER-COLLAPSE: SEPARATE;
+	BACKGROUND-COLOR: WHITE;
+}
+
+CODE {
+	FONT-FAMILY: ARIAL;
+	FONT-SIZE: 80%;
+}
+
+PRE {
+	FONT-FAMILY: ARIAL;
+	FONT-SIZE: 80%;
+}
+
+H1 {
+	FONT-FAMILY: ARIAL;
+	FONT-SIZE: 144%;
+	FONT-STYLE: BOLD;
+}
+
+H2 {
+	FONT-FAMILY: ARIAL;
+	FONT-SIZE: 120%;
+	FONT-STYLE: BOLD;
+}
+
+H3 {
+	FONT-FAMILY: ARIAL;
+	FONT-SIZE: 100%;
+	FONT-STYLE: BOLD;
+}
+
+</STYLE>
+<HEAD>
+<TITLE>
+Semistralni projekt &#40;NSS&#41;</TITLE>
+</HEAD>
+<BODY>
+<H1>Semistralni projekt &#40;NSS&#41;</H1>
+<B>author&#40;s&#41;: </B>Kirill Ivanov
+<BR>
+<P>
+NSS &#40;nejlepsi studijni system&#41; slouzi pro ucely univerzit pri sepisovani studentu&#44; znamek a abscence.<BR>
+<BR>
+<BR>
+<BR>
+Student- trida obsahujici studenty&#44; kteri se uci na univerzite<BR>
+	Atributy:<BR>
+		jmeno &#40;obsahuje jmeno a prijmeni&#41;<BR>
+		rokNarozeni<BR>
+		kod &#40;slouzi pro identifikace studenta&#41;<BR>
+	Metody:<BR>
+		vek &#40;slouzi pro vypsani veku studenta&#41;<BR>
+		dospely &#40;slouzi pro rozhodnuty dospely student nebo ne&#41;<BR>
+<BR>
+Ucitel- trida obsahujici vyucujicich&#44; kteri uci na univerzite<BR>
+	Atributy:<BR>
+		jmeno &#40;obsahuje jmeno a prijmeni&#41;<BR>
+		mistnost &#40;mistnost ve ktere vyucujici provadi konzultacni hodiny &#40;slouzi pro sudenty&#41;&#41;<BR>
+		odbornost<BR>
+	Metody:<BR>
+		-<BR>
+<BR>
+Cvicka- trida obsahujici cvicky&#44; kteri se provadi na univerzite<BR>
+	Atributy:<BR>
+		datum &#40;datum ve ktere cvicka byla provadena&#41; <BR>
+		ucitel &#40;vyucujici ktery cvicku provadel&#41;<BR>
+		predmet &#40;z jakeho predmetu cvicka byla&#41;<BR>
+	Metody:<BR>
+		-<BR>
+<BR>
+Znamka- trida obsahujici znamky&#44; kteri student dostal na cvicce<BR>
+	Atributy:<BR>
+		date &#40;datum hodnoceni&#41;<BR>
+		cvic &#40;cvicka na ktere student byl hodnocen&#41;<BR>
+		stud &#40;student ktery byl hodnocen&#41;<BR>
+		vysledek &#40;znamka&#41;<BR>
+		predmet &#40;predmet z ktereho student dostal znamku&#41;<BR>
+		vyucujici &#40;ucitel ktery hodnoceni ulozil&#41;<BR>
+	Metody:<BR>
+		uspesnost &#40;dosahl student znamky vice nez 4&#44; nebo ne&#41; <BR>
+<BR>
+Predmet-  trida obsahujici predmety&#44; kterym na univerzite uci<BR>
+	Atributy:<BR>
+		nazev<BR>
+		kod &#40;slouzi pro identifikace studenta&#41;<BR>
+		ucit &#40;zkratka od ucitel &#40;vyucujici ktery uci predmet&#41;&#41;<BR>
+	Metody:<BR>
+		-<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+		<BR>
+<BR>
+
+</P>
+
+<BR>
+<HR>
+<H2>Workspace</H2>
+<PRE>
+&quot;DOTAZ1 zkontrolovat&#44; zda byl student &#40;Karel Panzer&#41; na cvicce&quot;
+Cvicka1 select: [:x| x jmeno= &apos;Karel Panzner&apos;] 
+
+&quot;DOTAZ2 Vybrat predmet a studenta a zkontrolovat znamky&quot;
+Znamky select: [:x | &#40; x stud jmeno= &apos;Jan Blahut&apos;&#41;  &amp; &#40;x predmet nazev = &apos;Matematika&apos; &#41;] 
+
+&quot;DOTAZ3 Kdy student nebyl uspesen v matematice&quot;
+
+Znamky select: [:x| &#40;x uspesnost= &apos;ne&apos;&#41; &amp; &#40;x stud jmeno = &apos;Petr Smola&apos;&#41; &amp; &#40;x predmet nazev= &apos;Matematika&apos;&#41;]</PRE>
+<H4>Workspace Objects</H4>
+<UL>
+
+<BR>
+<LI>
+<CODE>
+Cvicka1 :Set
+</CODE>
+<LI>
+<CODE>
+Cvicka2 :Set
+</CODE>
+<LI>
+<CODE>
+Cvicka3 :Set
+</CODE>
+<LI>
+<CODE>
+Cvicka4 :Set
+</CODE>
+<LI>
+<CODE>
+Cvicka5 :Set
+</CODE>
+<LI>
+<CODE>
+Cvicka6 :Set
+</CODE>
+<LI>
+<CODE>
+Cvicka7 :Set
+</CODE>
+<LI>
+<CODE>
+Cvicka8 :Set
+</CODE>
+<LI>
+<CODE>
+Cvicka9 :Set
+</CODE>
+<LI>
+<CODE>
+Cvicky :Set
+</CODE>
+<LI>
+<CODE>
+Predmety :Set
+</CODE>
+<LI>
+<CODE>
+Studenti :Set
+</CODE>
+<LI>
+<CODE>
+Ucitele :Set
+</CODE>
+<LI>
+<CODE>
+Znamky :Set
+</CODE>
+</UL>
+
+<BR>
+<HR>
+<H2>Script</H2>
+<PRE>
+
+&quot;vytvoreni mnoziny pro tridu&quot;
+
+Studenti := Set new.
+Ucitele := Set new.
+Predmety := Set new.
+Cvicky := Set new.
+Znamky := Set new.
+
+&quot;trydy pouit na abscence&quot;
+Cvicka1 := Set new.
+Cvicka2 := Set new.
+Cvicka3 := Set new.
+Cvicka4 := Set new.
+Cvicka5 := Set new.
+Cvicka6 := Set new.
+Cvicka7 := Set new.
+Cvicka8 := Set new.
+Cvicka9 := Set new.
+
+
+
+&quot;zalozeni noveho studenta&quot;
+
+		
+s1 := Student new. 	&quot;Ukladame datu v class Student&quot;
+s1 jmeno: &apos;Karel Panzner&apos;;  		&quot;Jmeno studenta&quot;
+	kod: &apos;KA1999PA&apos;;  		&quot;kd studenta &#40;pouv se pro bezchybnou inicializaci studenta&#41;&quot;
+	rokNarozeni: 1999.	&quot;rok narozeni studenta&quot;
+
+&quot;dal stejny algortmus&#44; ukladame studenti s2- s12&quot;	
+
+s2 := Student new.
+s2 jmeno: &apos;Jan Blahut&apos;;
+	kod: &apos;JA2007BL &apos;;
+	rokNarozeni: 2007.
+
+s3 := Student new.
+s3 jmeno: &apos;Miroslav Pochyla&apos;;
+	kod: &apos;MI2000PO &apos;;
+	rokNarozeni: 2000.
+
+s4 := Student new.
+s4 jmeno: &apos;Vlastimil Fedra&apos;;
+	kod: &apos;VL2001FE &apos;;
+	rokNarozeni: 2001.
+
+s5 := Student new.
+s5 jmeno: &apos;Petr Braun&apos;;
+		kod: &apos;PE1998BR &apos;;
+rokNarozeni: 1998.
+	
+
+s6 := Student new.
+s6 jmeno: &apos;Petr Smola&apos;;
+	kod: &apos;PE1998SM &apos;;
+	rokNarozeni: 1998.
+
+s7 := Student new.
+s7 jmeno: &apos;Marie Linhartova&apos;;
+		kod: &apos;MA2002LI &apos;;
+	rokNarozeni: 2002.
+
+s8 := Student new.
+s8 jmeno: &apos;Gizela Plechacova&apos;;
+	kod: &apos;GI2002PL &apos;;
+	rokNarozeni: 2002.
+
+s9 := Student new.
+s9 jmeno: &apos;Eva Tvrznikova&apos;;
+		kod: &apos;EV1996TV &apos;;
+rokNarozeni: 1996.
+	
+
+s10 := Student new.
+s10 jmeno: &apos;Marek Balko&apos;;
+		kod: &apos;MA1997BA &apos;;
+	rokNarozeni: 1997.
+
+s11 := Student new.
+s11 jmeno: &apos;Dagmar Hejdova&apos;;
+		kod: &apos;DA2003HE &apos;;
+	rokNarozeni: 2003.
+
+s12 := Student new.
+s12	jmeno: &apos;Iva Polochova&apos;;
+	kod: &apos;IV1994PO &apos;;
+	rokNarozeni: 1994.
+
+
+
+&quot;Ulozeni studentu do Set Studenti&quot;
+Studenti add: s1; add: s2; add: s3; add: s4; add: s5; add: s6; add: s7; add: s8; add: s9; add: s10; add: s11; add: s12.
+
+
+
+&quot;Ulozeni studentu do ruznych cvicek&#44; aby jsme mohli kontroloval amscence studentu&quot;
+
+Cvicka1 add: s1; add: s2; add: s3; add: s4; add: s5; add: s6; add: s7.
+Cvicka2 add: s12 ; add: s11 ; add: s10 ; add: s2 ; add: s1 ; add: s6 ; add: s7 ; add: s8 ; add: s9.
+Cvicka3 add: s1 ; add: s2 ; add: s3 ; add: s4 ; add: s5 ; add: s6 ; add: s7 ; add: s8 ; add: s9 ; add: s10 ; add: s11 ; add: s12.
+
+Cvicka4 add: s1; add: s2; add: s3; add: s4; add: s5; add: s6; add: s7.
+Cvicka5 add: s12 ; add: s11 ; add: s10 ; add: s2 ; add: s1 ; add: s6 ; add: s7 ; add: s8 ; add: s9.
+Cvicka6 add: s1 ; add: s2 ; add: s3 ; add: s4 ; add: s5 ; add: s6 ; add: s7 ; add: s8 ; add: s9 ; add: s10 ; add: s11 ; add: s12.
+
+Cvicka7 add: s1; add: s2; add: s3; add: s4; add: s5; add: s6; add: s7.
+Cvicka8 add: s12 ; add: s11 ; add: s10 ; add: s2 ; add: s1 ; add: s6 ; add: s7 ; add: s8 ; add: s9.
+Cvicka9 add: s1 ; add: s2 ; add: s3 ; add: s4 ; add: s5 ; add: s6 ; add: s7 ; add: s8 ; add: s9 ; add: s10 ; add: s11 ; add: s12.
+
+
+&quot;zalozeni noveho vyucujiciho&quot;
+
+u1 := Ucitel new. 		&quot;Ukladame datu v class Ucitel&quot;
+u1 jmeno: &apos;Tereza Dvorakova&apos;; 		&quot;jmeno&quot;
+	odbornost: &apos; Ph.D.&apos;; 		&quot;odbornost&quot; 
+	mistnost: &apos;Z123&apos;. 		&quot;mistnost ve kterou vyucujici ma konzultacni hodiny &#40;pro studenti&#41;&quot;
+	
+
+&quot;stejny postup u2-u3&quot;
+u2 := Ucitel new.
+u2 jmeno: &apos;David Stoces&apos;;
+	odbornost: &apos; Ing.&apos;;
+	mistnost: &apos;F443&apos;.
+	
+
+
+u3 := Ucitel new.
+u3 jmeno: &apos;Michal Buchtela&apos;;
+	odbornost: &apos; Ing.&apos;;
+	mistnost: &apos;E552&apos;.
+
+&quot;Ulozeni vyucujicich do Set Ucitele &quot;
+Ucitele add: u1; add: u2; add: u3.
+
+
+
+
+
+
+&quot;zalozeni noveho predmetu&quot;
+p1 := Predmet new. 	&quot;Ukladame datu v class Predmet&quot;
+p1 nazev: &apos;Matematika&apos;; 	&quot;Nazev&quot;
+	ucit: u1; 		&quot;je odkaz na vyucujiciho&#44; ktery ten predmet uci&quot;
+	kod: &apos;22MAT4&apos;. 	&quot;kd predmetu &#40;pouv se pro bezchybnou inicializaci predmetu&#41;&quot;
+	
+&quot;stejny postup p2-p3&quot;
+p2 := Predmet new.
+p2 nazev: &apos;Objektove modelovani&apos;;
+	ucit: u2;
+	kod: &apos;22OBJMD4&apos;.
+
+p3 := Predmet new.
+p3 nazev: &apos;Architektura pocitacu&apos;;
+	ucit: u3;
+	kod: &apos;22ARCHPOC4&apos;.
+
+&quot;Ulozeni predmetu do Set Predmety &quot;
+Predmety add: p1; add: p2; add: p3.
+
+
+
+
+
+
+
+&quot;zalozeni nove cvicky&quot;
+cv1 := Cvicka new. 		&quot;Ukladame datu v class Cvicka&quot;
+cv1 datum: &apos;01-JAN-2022&apos; asDate;	&quot;Datum proveden cvicky&quot;
+	ucitel: u1;	&quot;je odkaz na vyucujiciho&#44; ktery na te cvicce uci&quot;
+	predmet: p1.   &quot;je odkaz na predmet vyuovan na cvicce &quot; 
+
+
+&quot;stejny postup cv2-cv9&quot;
+cv2 := Cvicka new.
+cv2 datum: &apos;012-JAN-2022&apos; asDate;
+	ucitel: u1;
+	predmet: p1.
+
+
+
+cv3 := Cvicka new.
+cv3 datum: &apos;22-JAN-2022&apos; asDate;
+	ucitel: u1;
+	predmet: p1.
+
+
+cv4 := Cvicka new.
+cv4 datum: &apos;04-JAN-2022&apos; asDate;
+	ucitel: u2;
+	predmet: p2.
+
+
+cv5 := Cvicka new.
+cv5 datum: &apos;14-JAN-2022&apos; asDate;
+	ucitel: u2;
+	predmet: p2.
+
+
+cv6 := Cvicka new.
+cv6 datum: &apos;24-JAN-2022&apos; asDate;
+	ucitel: u2;
+	predmet: p2.
+
+
+cv7 := Cvicka new.
+cv7 datum: &apos;08-JAN-2022&apos; asDate;
+	ucitel: u3;	
+	predmet: p3.
+
+	
+cv8 := Cvicka new.
+cv8 datum: &apos;18-JAN-2022&apos; asDate;
+	ucitel: u3;	
+	predmet: p3.
+	
+
+cv9 := Cvicka new.
+cv9 datum: &apos;28-JAN-2022&apos; asDate;
+	ucitel: u3;
+	predmet: p3.
+
+
+
+&quot;Ulozeni predmetu do Set Predmety &quot;
+Cvicky add: cv1; add: cv2; add: cv3; add: cv4; add: cv5; add: cv6; add: cv7; add: cv8; add: cv9. 
+
+
+
+
+&quot;zalozeni nove znamky&quot;
+zn1 := Znamka new. 	&quot;Ukladame datu v class Znamka&quot;
+zn1 date: &apos;01-JAN-2022&apos; asDate;		&quot;Datum ve kterem hodnocen bylo provedeno&quot;
+	cvic: cv1;	&quot;je odkaz na cvicku ve ktere hodnocen bylo provedeno &quot;
+	stud: s2;		&quot;je odkaz na student&#44; ktery znamku dostal&quot;
+	vysledek: 2;	&quot;znamka&quot;
+	vyucujici: u1;		&quot;je odkaz na vyucujiciho&#44; ktery hodnoceni provedl&quot;
+	predmet: p1.		&quot;je odkaz na predmet ve kterem znamka byla zapsana&quot; 
+
+&quot;stejny postup zn2-zn72&quot;
+
+zn2 := Znamka new.
+zn2 date: &apos;01-JAN-2022&apos; asDate;
+	cvic: cv1;
+	stud: s3;
+	vysledek: 2;
+	vyucujici: u1;
+	predmet: p1.
+
+zn3 := Znamka new.
+zn3 date: &apos;01-JAN-2022&apos; asDate;
+	cvic: cv1;
+	stud: s4;
+	vysledek: 3;
+	vyucujici: u1;
+	predmet: p1.
+
+zn4 := Znamka new.
+zn4 date: &apos;01-JAN-2022&apos; asDate;
+	cvic: cv1;
+	stud: s5;
+	vysledek: 4;
+	vyucujici: u1;
+	predmet: p1.
+
+zn5 := Znamka new.
+zn5 date: &apos;01-JAN-2022&apos; asDate;
+	cvic: cv1;
+	stud: s6;
+	vysledek: 3;
+	vyucujici: u1;
+	predmet: p1.
+
+zn6 := Znamka new.
+zn6 date: &apos;01-JAN-2022&apos; asDate;
+	cvic: cv1;
+	stud: s7;
+	vysledek: 1;
+	vyucujici: u1;
+	predmet: p1.
+
+zn7 := Znamka new.
+zn7 date: &apos;12-JAN-2022&apos; asDate;
+	cvic: cv2;
+	stud: s12;
+	vysledek: 1;
+	vyucujici: u1;
+	predmet: p1.
+
+zn8 := Znamka new.
+zn8 date: &apos;12-JAN-2022&apos; asDate;
+	cvic: cv2;
+	stud: s11;
+	vysledek: 1;
+	vyucujici: u1;
+	predmet: p1.
+
+zn9 := Znamka new.
+zn9 date: &apos;12-JAN-2022&apos; asDate;
+	cvic: cv2;
+	stud: s10;
+	vysledek: 3;
+	vyucujici: u1;
+	predmet: p1.
+
+zn10 := Znamka new.
+zn10 date: &apos;12-JAN-2022&apos; asDate;
+	cvic: cv2;
+	stud: s2;
+	vysledek: 3;
+	vyucujici: u1;
+	predmet: p1.
+
+zn11 := Znamka new.
+zn11 date: &apos;12-JAN-2022&apos; asDate;
+	cvic: cv2;
+	stud: s1;
+	vysledek: 4;
+	vyucujici: u1;
+	predmet: p1.
+
+zn12 := Znamka new.
+zn12 date: &apos;12-JAN-2022&apos; asDate;
+	cvic: cv2;
+	stud: s6;
+	vysledek: 2;
+	vyucujici: u1;
+	predmet: p1.
+
+zn13 := Znamka new.
+zn13 date: &apos;12-JAN-2022&apos; asDate;
+	cvic: cv2;
+	stud: s7;
+	vysledek: 2;
+	vyucujici: u1;
+	predmet: p1.
+
+zn14 := Znamka new.
+zn14 date: &apos;22-JAN-2022&apos; asDate;
+	cvic: cv3;
+	stud: s1;
+	vysledek: 1;
+	vyucujici: u1;
+	predmet: p1.
+
+zn15 := Znamka new.
+zn15 date: &apos;22-JAN-2022&apos; asDate;
+	cvic: cv3;
+	stud: s2;
+	vysledek: 2;
+	vyucujici: u1;
+	predmet: p1.
+
+zn16 := Znamka new.
+zn16 date: &apos;22-JAN-2022&apos; asDate;
+	cvic: cv3;
+	stud: s3;
+	vysledek: 3;
+	vyucujici: u1;
+	predmet: p1.
+
+zn17 := Znamka new.
+zn17 date: &apos;22-JAN-2022&apos; asDate;
+	cvic: cv3;
+	stud: s4;
+	vysledek: 3;
+	vyucujici: u1;
+	predmet: p1.
+
+zn14 := Znamka new.
+zn14 date: &apos;22-JAN-2022&apos; asDate;
+	cvic: cv3;
+	stud: s5;
+	vysledek: 4;
+	vyucujici: u1;
+	predmet: p1.
+
+zn17 := Znamka new.
+zn17 date: &apos;22-JAN-2022&apos; asDate;
+	cvic: cv3;
+	stud: s6;
+	vysledek: 4;
+	vyucujici: u1;
+	predmet: p1.
+
+zn18 := Znamka new.
+zn18 date: &apos;22-JAN-2022&apos; asDate;
+	cvic: cv3;
+	stud: s7;
+	vysledek: 2;
+	vyucujici: u1;
+	predmet: p1.
+
+zn19 := Znamka new.
+zn19 date: &apos;22-JAN-2022&apos; asDate;
+	cvic: cv3;
+	stud: s8;
+	vysledek: 2;
+	vyucujici: u1;
+	predmet: p1.
+
+zn20 := Znamka new.
+zn20 date: &apos;22-JAN-2022&apos; asDate;
+	cvic: cv3;
+	stud: s9;
+	vysledek: 1;
+	vyucujici: u1;
+	predmet: p1.
+
+zn21 := Znamka new.
+zn21 date: &apos;22-JAN-2022&apos; asDate;
+	cvic: cv3;
+	stud: s10;
+	vysledek: 1;
+	vyucujici: u1;
+	predmet: p1.
+
+zn22 := Znamka new.
+zn22 date: &apos;22-JAN-2022&apos; asDate;
+	cvic: cv3;
+	stud: s11;
+	vysledek: 3;
+	vyucujici: u1;
+	predmet: p1.
+
+zn23 := Znamka new.
+zn23 date: &apos;22-JAN-2022&apos; asDate;
+	cvic: cv3;
+	stud: s12;
+	vysledek: 3;
+	vyucujici: u1;
+	predmet: p1.
+
+zn24 := Znamka new.
+zn24 date: &apos;04-JAN-2022&apos; asDate;
+	cvic: cv4;
+	stud: s1;
+	vysledek: 1;
+	vyucujici: u2;
+	predmet: p2.
+
+zn25 := Znamka new.
+zn25 date: &apos;04-JAN-2022&apos; asDate;
+	cvic: cv4;
+	stud: s2;
+	vysledek: 1;
+	vyucujici: u2;
+	predmet: p2.
+
+zn26 := Znamka new.
+zn26 date: &apos;04-JAN-2022&apos; asDate;
+	cvic: cv4;
+	stud: s3;
+	vysledek: 1;
+	vyucujici: u2;
+	predmet: p2.
+
+zn27 := Znamka new.
+zn27 date: &apos;04-JAN-2022&apos; asDate;
+	cvic: cv4;
+	stud: s4;
+	vysledek: 4;
+	vyucujici: u2;
+	predmet: p2.
+
+zn28 := Znamka new.
+zn28 date: &apos;04-JAN-2022&apos; asDate;
+	cvic: cv4;
+	stud: s5;
+	vysledek: 4;
+	vyucujici: u2;
+	predmet: p2.
+
+zn29 := Znamka new.
+zn29 date: &apos;04-JAN-2022&apos; asDate;
+	cvic: cv4;
+	stud: s6;
+	vysledek: 2;
+	vyucujici: u2;
+	predmet: p2.
+
+zn30 := Znamka new.
+zn30 date: &apos;04-JAN-2022&apos; asDate;
+	cvic: cv4;
+	stud: s7;
+	vysledek: 1;
+	vyucujici: u2;
+	predmet: p2.
+
+
+zn30 := Znamka new.
+zn30 date: &apos;14-JAN-2022&apos; asDate;
+	cvic: cv5;
+	stud: s12;
+	vysledek:2 ;
+	vyucujici: u2;
+	predmet: p2.
+
+
+zn31 := Znamka new.
+zn31 date: &apos;14-JAN-2022&apos; asDate;
+	cvic: cv5;
+	stud: s11;
+	vysledek: 2;
+	vyucujici: u2;
+	predmet: p2.
+
+zn32 := Znamka new.
+zn32 date: &apos;14-JAN-2022&apos; asDate;
+	cvic: cv5;
+	stud: s10;
+	vysledek: 3;
+	vyucujici: u2;
+	predmet: p2.
+
+
+zn33 := Znamka new.
+zn33 date: &apos;14-JAN-2022&apos; asDate;
+	cvic: cv5;
+	stud: s6;
+	vysledek: 2;
+	vyucujici: u2;
+	predmet: p2.
+
+zn34 := Znamka new.
+zn34 date: &apos;14-JAN-2022&apos; asDate;
+	cvic: cv5;
+	stud: s7;
+	vysledek: 3;
+	vyucujici: u2;
+	predmet: p2.
+
+zn35 := Znamka new.
+zn35 date: &apos;14-JAN-2022&apos; asDate;
+	cvic: cv5;
+	stud: s8;
+	vysledek: 3;
+	vyucujici: u2;
+	predmet: p2.
+
+zn36 := Znamka new.
+zn36 date: &apos;14-JAN-2022&apos; asDate;
+	cvic: cv5;
+	stud: s9;
+	vysledek: 3;
+	vyucujici: u2;
+	predmet: p2.
+
+
+
+
+
+zn37 := Znamka new.
+zn37 date: &apos;24-JAN-2022&apos; asDate;
+	cvic: cv6;
+	stud: s1;
+	vysledek: 1;
+	vyucujici: u2;
+	predmet: p2.
+
+zn38 := Znamka new.
+zn38 date: &apos;24-JAN-2022&apos; asDate;
+	cvic: cv6;
+	stud: s2;
+	vysledek: 3;
+	vyucujici: u2;
+	predmet: p2.
+
+zn39 := Znamka new.
+zn39 date: &apos;24-JAN-2022&apos; asDate;
+	cvic: cv6;
+	stud: s4;
+	vysledek: 4;
+	vyucujici: u2;
+	predmet: p2.
+
+zn41 := Znamka new.
+zn41 date: &apos;24-JAN-2022&apos; asDate;
+	cvic: cv6;
+	stud: s5;
+	vysledek: 2;
+	vyucujici: u2;
+	predmet: p2.
+
+zn42 := Znamka new.
+zn42 date: &apos;24-JAN-2022&apos; asDate;
+	cvic: cv6;
+	stud: s6;
+	vysledek: 2;
+	vyucujici: u2;
+	predmet: p2.
+
+zn43 := Znamka new.
+zn43 date: &apos;24-JAN-2022&apos; asDate;
+	cvic: cv6;
+	stud: s7;
+	vysledek: 2;
+	vyucujici: u2;
+	predmet: p2.
+
+zn44 := Znamka new.
+zn44 date: &apos;24-JAN-2022&apos; asDate;
+	cvic: cv6;
+	stud: s8;
+	vysledek: 2;
+	vyucujici: u2;
+	predmet: p2.
+
+zn45 := Znamka new.
+zn45 date: &apos;24-JAN-2022&apos; asDate;
+	cvic: cv6;
+	stud: s9;
+	vysledek: 1;
+	vyucujici: u2;
+	predmet: p2.
+
+zn46 := Znamka new.
+zn46 date: &apos;24-JAN-2022&apos; asDate;
+	cvic: cv6;
+	stud: s10;
+	vysledek: 1;
+	vyucujici: u2;
+	predmet: p2.
+
+zn47 := Znamka new.
+zn47 date: &apos;24-JAN-2022&apos; asDate;
+	cvic: cv6;
+	stud: s11;
+	vysledek: 2;
+	vyucujici: u2;
+	predmet: p2.
+
+zn48 := Znamka new.
+zn48 date: &apos;24-JAN-2022&apos; asDate;
+	cvic: cv6;
+	stud: s12;
+	vysledek: 1;
+	vyucujici: u2;
+	predmet: p2.	
+
+
+zn49 := Znamka new.
+zn49 date: &apos;08-JAN-2022&apos; asDate;
+	cvic: cv7;
+	stud: s2;
+	vysledek: 4;
+	vyucujici: u3;
+	predmet: p3.
+
+
+zn50 := Znamka new.
+zn50 date: &apos;08-JAN-2022&apos; asDate;
+	cvic: cv7;
+	stud: s3;
+	vysledek: 2;
+	vyucujici: u3;
+	predmet: p3.
+
+zn51 := Znamka new.
+zn51 date: &apos;08-JAN-2022&apos; asDate;
+	cvic: cv7;
+	stud: s4;
+	vysledek: 3;
+	vyucujici: u3;
+	predmet: p3.
+
+zn52 := Znamka new.
+zn52 date: &apos;08-JAN-2022&apos; asDate;
+	cvic: cv7;
+	stud: s5;
+	vysledek: 2;
+	vyucujici: u3;
+	predmet: p3.
+
+zn53 := Znamka new.
+zn53 date: &apos;08-JAN-2022&apos; asDate;
+	cvic: cv7;
+	stud: s6;
+	vysledek: 3;
+	vyucujici: u3;
+	predmet: p3.
+
+zn54 := Znamka new.
+zn54 date: &apos;08-JAN-2022&apos; asDate;
+	cvic: cv7;
+	stud: s7;
+	vysledek: 1;
+	vyucujici: u3;
+	predmet: p3.
+
+
+zn55 := Znamka new.
+zn55 date: &apos;18-JAN-2022&apos; asDate;
+	cvic: cv8;
+	stud: s10;
+	vysledek: 1;
+	vyucujici: u3;
+	predmet: p3.
+
+zn56 := Znamka new.
+zn56 date: &apos;18-JAN-2022&apos; asDate;
+	cvic: cv8;
+	stud: s6;
+	vysledek: 3;
+	vyucujici: u3;
+	predmet: p3.
+
+zn57 := Znamka new.
+zn57 date: &apos;18-JAN-2022&apos; asDate;
+	cvic: cv8;
+	stud: s7;
+	vysledek: 2;
+	vyucujici: u3;
+	predmet: p3.
+
+zn58 := Znamka new.
+zn58 date: &apos;18-JAN-2022&apos; asDate;
+	cvic: cv8;
+	stud: s8;
+	vysledek: 2;
+	vyucujici: u3;
+	predmet: p3.
+
+zn59 := Znamka new.
+zn59 date: &apos;18-JAN-2022&apos; asDate;
+	cvic: cv8;
+	stud: s9;
+	vysledek: 3;
+	vyucujici: u3;
+	predmet: p3.
+
+zn60 := Znamka new.
+zn60 date: &apos;18-JAN-2022&apos; asDate;
+	cvic: cv8;
+	stud: s12;
+	vysledek: 1;
+	vyucujici: u3;
+	predmet: p3.
+
+zn61 := Znamka new.
+zn61 date: &apos;28-JAN-2022&apos; asDate;
+	cvic: cv9;
+	stud: s1;
+	vysledek: 4;
+	vyucujici: u3;
+	predmet: p3.
+
+zn62 := Znamka new.
+zn62 date: &apos;28-JAN-2022&apos; asDate;
+	cvic: cv9;
+	stud: s2;
+	vysledek: 1;
+	vyucujici: u3;
+	predmet: p3.
+
+zn63 := Znamka new.
+zn63 date: &apos;28-JAN-2022&apos; asDate;
+	cvic: cv9;
+	stud: s3;
+	vysledek: 1;
+	vyucujici: u3;
+	predmet: p3.
+
+zn64 := Znamka new.
+zn64 date: &apos;28-JAN-2022&apos; asDate;
+	cvic: cv9;
+	stud: s4;
+	vysledek: 3;
+	vyucujici: u3;
+	predmet: p3.
+
+zn65 := Znamka new.
+zn65 date: &apos;28-JAN-2022&apos; asDate;
+	cvic: cv9;
+	stud: s5;
+	vysledek: 3;
+	vyucujici: u3;
+	predmet: p3.
+
+zn66 := Znamka new.
+zn66 date: &apos;28-JAN-2022&apos; asDate;
+	cvic: cv9;
+	stud: s6;
+	vysledek: 3;
+	vyucujici: u3;
+	predmet: p3.
+
+zn67 := Znamka new.
+zn67 date: &apos;28-JAN-2022&apos; asDate;
+	cvic: cv9;
+	stud: s7;
+	vysledek: 2;
+	vyucujici: u3;
+	predmet: p3.
+
+zn68 := Znamka new.
+zn68 date: &apos;28-JAN-2022&apos; asDate;
+	cvic: cv9;
+	stud: s8;
+	vysledek: 4;
+	vyucujici: u3;
+	predmet: p3.
+
+zn69 := Znamka new.
+zn69 date: &apos;28-JAN-2022&apos; asDate;
+	cvic: cv9;
+	stud: s9;
+	vysledek: 2;
+	vyucujici: u3;
+	predmet: p3.
+
+zn70 := Znamka new.
+zn70 date: &apos;28-JAN-2022&apos; asDate;
+	cvic: cv9;
+	stud: s10;
+	vysledek: 2;
+	vyucujici: u3;
+	predmet: p3.
+
+zn71 := Znamka new.
+zn71 date: &apos;28-JAN-2022&apos; asDate;
+	cvic: cv9;
+	stud: s11;
+	vysledek: 3;
+	vyucujici: u3;
+	predmet: p3.
+
+zn72 := Znamka new.
+zn72 date: &apos;28-JAN-2022&apos; asDate;
+	cvic: cv9;
+	stud: s12;
+	vysledek: 3;
+	vyucujici: u3;
+	predmet: p3.
+
+&quot;Ulozeni znamek do Set Znamky &quot;
+
+Znamky add: zn1; add: zn2; add: zn3; add: zn4; add: zn5; add: zn6; add: zn7; add: zn8; add: zn9; add: zn10; add: zn11; add: zn12; add: zn13; add: zn14; add: zn15; add: zn16; add: zn17; add: zn18; add: zn19; add: zn20; add: zn21; add: zn22; add: zn23; add: zn24 ; add: zn25 ; add: zn26 ; add: zn27 ; add: zn28 ; add: zn29 ; add: zn30 ;add: zn31 ; add: zn32 ; add: zn33 ; add: zn34; add: zn35 ; add: zn36 ; add: zn37 ; add: zn38 ; add: zn39 ;  add: zn41 ; add: zn42 ; add: zn43 ; add: zn44 ; add: zn45 ; add: zn46 ; add: zn47 ; add: zn48 ; add: zn49 ; add: zn50 ; add: zn51 ; add: zn52 ; add: zn53 ; add: zn54 ; add: zn55 ; add: zn56 ; add: zn57 ; add: zn58 ; add: zn59 ; add: zn60 ; add: zn61 ; add: zn62 ; add: zn63 ; add: zn64 ; add: zn65 ; add: zn66 ; add: zn67 ; add: zn68 ; add: zn69 ; add: zn70 ; add: zn71 ; add: zn72.
+
+
+
+</PRE>
+<HR>
+<H2>Diagram</H2>
+<IMG SRC="aDaskalosProject.gif">
+<HR>
+<H2>Classes</H2>
+<TABLE BORDER="0" CELLPADDING="3" CELLSPACING="0" WIDTH=100%>
+<TR>
+<TD WIDTH=20%>
+<TABLE WIDTH=95% BORDER="1" CELLSPACING="0" BORDERCOLOR=BLACK>
+<TR><TD><BIG>
+<B><CODE>
+Znamka
+</CODE></B>
+</BIG></TD></TR>
+<TR><TD>
+<I><SMALL>instance variables</SMALL></I><BR>
+<CODE>
+cvic :Object
+</CODE>
+<BR>
+<CODE>
+date :Date
+</CODE>
+<BR>
+<CODE>
+predmet :Object
+</CODE>
+<BR>
+<CODE>
+stud :Object
+</CODE>
+<BR>
+<CODE>
+vysledek :Number
+</CODE>
+<BR>
+<CODE>
+vyucujici :Object
+</CODE>
+<BR>
+</TD></TR>
+<TR><TD>
+<I><SMALL>methods</SMALL></I><BR>
+<CODE>
+cvic
+</CODE>
+<BR>
+<CODE>
+cvic:
+</CODE>
+<BR>
+<CODE>
+date
+</CODE>
+<BR>
+<CODE>
+date:
+</CODE>
+<BR>
+<CODE>
+initialize
+</CODE>
+<BR>
+<CODE>
+predmet
+</CODE>
+<BR>
+<CODE>
+predmet:
+</CODE>
+<BR>
+<CODE>
+stud
+</CODE>
+<BR>
+<CODE>
+stud:
+</CODE>
+<BR>
+<CODE>
+uspesnost
+</CODE>
+<BR>
+<CODE>
+vysledek
+</CODE>
+<BR>
+<CODE>
+vysledek:
+</CODE>
+<BR>
+<CODE>
+vyucujici
+</CODE>
+<BR>
+<CODE>
+vyucujici:
+</CODE>
+<BR>
+</TD></TR>
+</TABLE>
+</TD>
+<TD VALIGN="TOP">
+<P>
+
+</P>
+</TD>
+</TR>
+</TABLE>
+<H4>code of non-accessing methods: </H4>
+<UL>
+<LI>
+<B><CODE>
+initialize
+</CODE></B>
+<PRE>
+&quot;generated by Daskalos&quot;
+
+     super initialize.
+     date := nil.
+     cvic := nil.
+     stud := nil.
+     vysledek := nil.
+     predmet := nil.
+     vyucujici := nil.</PRE>
+<LI>
+<B><CODE>
+uspesnost
+</CODE></B>
+<PRE>
+
+	vysledek &lt; 4 ifTrue: [^&apos;ano&apos;] ifFalse: [^&apos;ne&apos;]</PRE>
+</UL>
+<TABLE BORDER="0" CELLPADDING="3" CELLSPACING="0" WIDTH=100%>
+<TR>
+<TD WIDTH=20%>
+<TABLE WIDTH=95% BORDER="1" CELLSPACING="0" BORDERCOLOR=BLACK>
+<TR><TD><BIG>
+<B><CODE>
+Cvicka
+</CODE></B>
+</BIG></TD></TR>
+<TR><TD>
+<I><SMALL>instance variables</SMALL></I><BR>
+<CODE>
+datum :Date
+</CODE>
+<BR>
+<CODE>
+predmet :Object
+</CODE>
+<BR>
+<CODE>
+ucitel :Object
+</CODE>
+<BR>
+</TD></TR>
+<TR><TD>
+<I><SMALL>methods</SMALL></I><BR>
+<CODE>
+datum
+</CODE>
+<BR>
+<CODE>
+datum:
+</CODE>
+<BR>
+<CODE>
+initialize
+</CODE>
+<BR>
+<CODE>
+predmet
+</CODE>
+<BR>
+<CODE>
+predmet:
+</CODE>
+<BR>
+<CODE>
+ucitel
+</CODE>
+<BR>
+<CODE>
+ucitel:
+</CODE>
+<BR>
+</TD></TR>
+</TABLE>
+</TD>
+<TD VALIGN="TOP">
+<P>
+
+</P>
+</TD>
+</TR>
+</TABLE>
+<H4>code of non-accessing methods: </H4>
+<UL>
+<LI>
+<B><CODE>
+initialize
+</CODE></B>
+<PRE>
+&quot;generated by Daskalos&quot;
+
+     super initialize.
+     datum := nil.
+     ucitel := nil.
+     predmet := nil.</PRE>
+</UL>
+<TABLE BORDER="0" CELLPADDING="3" CELLSPACING="0" WIDTH=100%>
+<TR>
+<TD WIDTH=20%>
+<TABLE WIDTH=95% BORDER="1" CELLSPACING="0" BORDERCOLOR=BLACK>
+<TR><TD><BIG>
+<B><CODE>
+Student
+</CODE></B>
+</BIG></TD></TR>
+<TR><TD>
+<I><SMALL>instance variables</SMALL></I><BR>
+<CODE>
+jmeno :String
+</CODE>
+<BR>
+<CODE>
+kod :String
+</CODE>
+<BR>
+<CODE>
+rokNarozeni :Number
+</CODE>
+<BR>
+</TD></TR>
+<TR><TD>
+<I><SMALL>methods</SMALL></I><BR>
+<CODE>
+dospely
+</CODE>
+<BR>
+<CODE>
+initialize
+</CODE>
+<BR>
+<CODE>
+jmeno
+</CODE>
+<BR>
+<CODE>
+jmeno:
+</CODE>
+<BR>
+<CODE>
+kod
+</CODE>
+<BR>
+<CODE>
+kod:
+</CODE>
+<BR>
+<CODE>
+rokNarozeni
+</CODE>
+<BR>
+<CODE>
+rokNarozeni:
+</CODE>
+<BR>
+<CODE>
+vek
+</CODE>
+<BR>
+</TD></TR>
+</TABLE>
+</TD>
+<TD VALIGN="TOP">
+<P>
+
+</P>
+</TD>
+</TR>
+</TABLE>
+<H4>code of non-accessing methods: </H4>
+<UL>
+<LI>
+<B><CODE>
+dospely
+</CODE></B>
+<PRE>
+
+	self vek &gt; 17 ifTrue: [^&apos;ano&apos;] ifFalse: [^&apos;ne&apos;]</PRE>
+<LI>
+<B><CODE>
+initialize
+</CODE></B>
+<PRE>
+&quot;generated by Daskalos&quot;
+
+     super initialize.
+     jmeno := nil.
+     rokNarozeni := nil.
+     kod := nil.</PRE>
+<LI>
+<B><CODE>
+vek
+</CODE></B>
+<PRE>
+
+	^2022 - rokNarozeni</PRE>
+</UL>
+<TABLE BORDER="0" CELLPADDING="3" CELLSPACING="0" WIDTH=100%>
+<TR>
+<TD WIDTH=20%>
+<TABLE WIDTH=95% BORDER="1" CELLSPACING="0" BORDERCOLOR=BLACK>
+<TR><TD><BIG>
+<B><CODE>
+Ucitel
+</CODE></B>
+</BIG></TD></TR>
+<TR><TD>
+<I><SMALL>instance variables</SMALL></I><BR>
+<CODE>
+jmeno :String
+</CODE>
+<BR>
+<CODE>
+mistnost :String
+</CODE>
+<BR>
+<CODE>
+odbornost :String
+</CODE>
+<BR>
+</TD></TR>
+<TR><TD>
+<I><SMALL>methods</SMALL></I><BR>
+<CODE>
+initialize
+</CODE>
+<BR>
+<CODE>
+jmeno
+</CODE>
+<BR>
+<CODE>
+jmeno:
+</CODE>
+<BR>
+<CODE>
+mistnost
+</CODE>
+<BR>
+<CODE>
+mistnost:
+</CODE>
+<BR>
+<CODE>
+odbornost
+</CODE>
+<BR>
+<CODE>
+odbornost:
+</CODE>
+<BR>
+</TD></TR>
+</TABLE>
+</TD>
+<TD VALIGN="TOP">
+<P>
+
+</P>
+</TD>
+</TR>
+</TABLE>
+<H4>code of non-accessing methods: </H4>
+<UL>
+<LI>
+<B><CODE>
+initialize
+</CODE></B>
+<PRE>
+&quot;generated by Daskalos&quot;
+
+     super initialize.
+     jmeno := nil.
+     mistnost := nil.
+     odbornost := nil.</PRE>
+</UL>
+<TABLE BORDER="0" CELLPADDING="3" CELLSPACING="0" WIDTH=100%>
+<TR>
+<TD WIDTH=20%>
+<TABLE WIDTH=95% BORDER="1" CELLSPACING="0" BORDERCOLOR=BLACK>
+<TR><TD><BIG>
+<B><CODE>
+Predmet
+</CODE></B>
+</BIG></TD></TR>
+<TR><TD>
+<I><SMALL>instance variables</SMALL></I><BR>
+<CODE>
+kod :String
+</CODE>
+<BR>
+<CODE>
+nazev :String
+</CODE>
+<BR>
+<CODE>
+ucit :Object
+</CODE>
+<BR>
+</TD></TR>
+<TR><TD>
+<I><SMALL>methods</SMALL></I><BR>
+<CODE>
+initialize
+</CODE>
+<BR>
+<CODE>
+kod
+</CODE>
+<BR>
+<CODE>
+kod:
+</CODE>
+<BR>
+<CODE>
+nazev
+</CODE>
+<BR>
+<CODE>
+nazev:
+</CODE>
+<BR>
+<CODE>
+ucit
+</CODE>
+<BR>
+<CODE>
+ucit:
+</CODE>
+<BR>
+</TD></TR>
+</TABLE>
+</TD>
+<TD VALIGN="TOP">
+<P>
+
+</P>
+</TD>
+</TR>
+</TABLE>
+<H4>code of non-accessing methods: </H4>
+<UL>
+<LI>
+<B><CODE>
+initialize
+</CODE></B>
+<PRE>
+&quot;generated by Daskalos&quot;
+
+     super initialize.
+     nazev := nil.
+     kod := nil.
+     ucit := nil.</PRE>
+</UL>
+<HR>
+<H2>Links</H2>
+<A HREF="aDaskalosProject.xml">Data file</A> and 
+<A HREF="aDaskalosProject.st">class source</A>.
+
+<BR>
+
+<BR>
+<CODE>
+Generated by Daskalos - Object Modeling Tutor &#40;C&#41; 2006 V. Merunka
+</CODE>
+
+<BR>
+<CODE>
+30 апреля 2022 г.
+</CODE>
+</BODY></HTML>

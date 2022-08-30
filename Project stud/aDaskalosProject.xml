@@ -1,0 +1,2518 @@
+<sixx sixx.version="1.0">
+	<sixx.object sixx.id="0" sixx.type="DaskalosProject" >
+		<sixx.object sixx.id="1" sixx.name="name" sixx.type="String" >Semistralni projekt &#40;NSS&#41;</sixx.object>
+		<sixx.object sixx.id="2" sixx.name="author" sixx.type="String" >Kirill Ivanov</sixx.object>
+		<sixx.object sixx.id="3" sixx.name="description" sixx.type="String" >NSS &#40;nejlepsi studijni system&#41; slouzi pro ucely univerzit pri sepisovani studentu&#44; znamek a abscence.
+
+
+
+Student- trida obsahujici studenty&#44; kteri se uci na univerzite
+	Atributy:
+		jmeno &#40;obsahuje jmeno a prijmeni&#41;
+		rokNarozeni
+		kod &#40;slouzi pro identifikace studenta&#41;
+	Metody:
+		vek &#40;slouzi pro vypsani veku studenta&#41;
+		dospely &#40;slouzi pro rozhodnuty dospely student nebo ne&#41;
+
+Ucitel- trida obsahujici vyucujicich&#44; kteri uci na univerzite
+	Atributy:
+		jmeno &#40;obsahuje jmeno a prijmeni&#41;
+		mistnost &#40;mistnost ve ktere vyucujici provadi konzultacni hodiny &#40;slouzi pro sudenty&#41;&#41;
+		odbornost
+	Metody:
+		-
+
+Cvicka- trida obsahujici cvicky&#44; kteri se provadi na univerzite
+	Atributy:
+		datum &#40;datum ve ktere cvicka byla provadena&#41; 
+		ucitel &#40;vyucujici ktery cvicku provadel&#41;
+		predmet &#40;z jakeho predmetu cvicka byla&#41;
+	Metody:
+		-
+
+Znamka- trida obsahujici znamky&#44; kteri student dostal na cvicce
+	Atributy:
+		date &#40;datum hodnoceni&#41;
+		cvic &#40;cvicka na ktere student byl hodnocen&#41;
+		stud &#40;student ktery byl hodnocen&#41;
+		vysledek &#40;znamka&#41;
+		predmet &#40;predmet z ktereho student dostal znamku&#41;
+		vyucujici &#40;ucitel ktery hodnoceni ulozil&#41;
+	Metody:
+		uspesnost &#40;dosahl student znamky vice nez 4&#44; nebo ne&#41; 
+
+Predmet-  trida obsahujici predmety&#44; kterym na univerzite uci
+	Atributy:
+		nazev
+		kod &#40;slouzi pro identifikace studenta&#41;
+		ucit &#40;zkratka od ucitel &#40;vyucujici ktery uci predmet&#41;&#41;
+	Metody:
+		-
+
+
+
+
+
+
+
+
+
+		
+
+</sixx.object>
+		<sixx.object sixx.id="4" sixx.name="workspaceVariables" sixx.type="Dictionary" >
+			<sixx.object sixx.id="5" sixx.type="Association" >
+				<sixx.object sixx.id="6" sixx.name="key" sixx.type="Symbol" >Cvicka4</sixx.object>
+				<sixx.object sixx.id="7" sixx.name="value" sixx.type="Set" >
+					<sixx.object sixx.id="8" sixx.type="Student" >
+						<sixx.object sixx.id="9" sixx.name="jmeno" sixx.type="String" >Petr Braun</sixx.object>
+						<sixx.object sixx.id="10" sixx.name="rokNarozeni" sixx.type="SmallInteger" >1998</sixx.object>
+						<sixx.object sixx.id="11" sixx.name="kod" sixx.type="String" >PE1998BR </sixx.object>
+					</sixx.object>
+					<sixx.object sixx.id="12" sixx.type="Student" >
+						<sixx.object sixx.id="13" sixx.name="jmeno" sixx.type="String" >Marie Linhartova</sixx.object>
+						<sixx.object sixx.id="14" sixx.name="rokNarozeni" sixx.type="SmallInteger" >2002</sixx.object>
+						<sixx.object sixx.id="15" sixx.name="kod" sixx.type="String" >MA2002LI </sixx.object>
+					</sixx.object>
+					<sixx.object sixx.id="16" sixx.type="Student" >
+						<sixx.object sixx.id="17" sixx.name="jmeno" sixx.type="String" >Petr Smola</sixx.object>
+						<sixx.object sixx.name="rokNarozeni" sixx.idref="10" />
+						<sixx.object sixx.id="18" sixx.name="kod" sixx.type="String" >PE1998SM </sixx.object>
+					</sixx.object>
+					<sixx.object sixx.id="19" sixx.type="Student" >
+						<sixx.object sixx.id="20" sixx.name="jmeno" sixx.type="String" >Miroslav Pochyla</sixx.object>
+						<sixx.object sixx.id="21" sixx.name="rokNarozeni" sixx.type="SmallInteger" >2000</sixx.object>
+						<sixx.object sixx.id="22" sixx.name="kod" sixx.type="String" >MI2000PO </sixx.object>
+					</sixx.object>
+					<sixx.object sixx.id="23" sixx.type="Student" >
+						<sixx.object sixx.id="24" sixx.name="jmeno" sixx.type="String" >Jan Blahut</sixx.object>
+						<sixx.object sixx.id="25" sixx.name="rokNarozeni" sixx.type="SmallInteger" >2007</sixx.object>
+						<sixx.object sixx.id="26" sixx.name="kod" sixx.type="String" >JA2007BL </sixx.object>
+					</sixx.object>
+					<sixx.object sixx.id="27" sixx.type="Student" >
+						<sixx.object sixx.id="28" sixx.name="jmeno" sixx.type="String" >Vlastimil Fedra</sixx.object>
+						<sixx.object sixx.id="29" sixx.name="rokNarozeni" sixx.type="SmallInteger" >2001</sixx.object>
+						<sixx.object sixx.id="30" sixx.name="kod" sixx.type="String" >VL2001FE </sixx.object>
+					</sixx.object>
+					<sixx.object sixx.id="31" sixx.type="Student" >
+						<sixx.object sixx.id="32" sixx.name="jmeno" sixx.type="String" >Karel Panzner</sixx.object>
+						<sixx.object sixx.id="33" sixx.name="rokNarozeni" sixx.type="SmallInteger" >1999</sixx.object>
+						<sixx.object sixx.id="34" sixx.name="kod" sixx.type="String" >KA1999PA</sixx.object>
+					</sixx.object>
+				</sixx.object>
+			</sixx.object>
+			<sixx.object sixx.id="35" sixx.type="Association" >
+				<sixx.object sixx.id="36" sixx.name="key" sixx.type="Symbol" >Studenti</sixx.object>
+				<sixx.object sixx.id="37" sixx.name="value" sixx.type="Set" >
+					<sixx.object sixx.id="38" sixx.type="Student" >
+						<sixx.object sixx.id="39" sixx.name="jmeno" sixx.type="String" >Dagmar Hejdova</sixx.object>
+						<sixx.object sixx.id="40" sixx.name="rokNarozeni" sixx.type="SmallInteger" >2003</sixx.object>
+						<sixx.object sixx.id="41" sixx.name="kod" sixx.type="String" >DA2003HE </sixx.object>
+					</sixx.object>
+					<sixx.object sixx.id="42" sixx.type="Student" >
+						<sixx.object sixx.id="43" sixx.name="jmeno" sixx.type="String" >Marek Balko</sixx.object>
+						<sixx.object sixx.id="44" sixx.name="rokNarozeni" sixx.type="SmallInteger" >1997</sixx.object>
+						<sixx.object sixx.id="45" sixx.name="kod" sixx.type="String" >MA1997BA </sixx.object>
+					</sixx.object>
+					<sixx.object sixx.idref="23" />
+					<sixx.object sixx.idref="27" />
+					<sixx.object sixx.idref="16" />
+					<sixx.object sixx.idref="31" />
+					<sixx.object sixx.idref="19" />
+					<sixx.object sixx.id="46" sixx.type="Student" >
+						<sixx.object sixx.id="47" sixx.name="jmeno" sixx.type="String" >Iva Polochova</sixx.object>
+						<sixx.object sixx.id="48" sixx.name="rokNarozeni" sixx.type="SmallInteger" >1994</sixx.object>
+						<sixx.object sixx.id="49" sixx.name="kod" sixx.type="String" >IV1994PO </sixx.object>
+					</sixx.object>
+					<sixx.object sixx.id="50" sixx.type="Student" >
+						<sixx.object sixx.id="51" sixx.name="jmeno" sixx.type="String" >Gizela Plechacova</sixx.object>
+						<sixx.object sixx.name="rokNarozeni" sixx.idref="14" />
+						<sixx.object sixx.id="52" sixx.name="kod" sixx.type="String" >GI2002PL </sixx.object>
+					</sixx.object>
+					<sixx.object sixx.idref="8" />
+					<sixx.object sixx.id="53" sixx.type="Student" >
+						<sixx.object sixx.id="54" sixx.name="jmeno" sixx.type="String" >Eva Tvrznikova</sixx.object>
+						<sixx.object sixx.id="55" sixx.name="rokNarozeni" sixx.type="SmallInteger" >1996</sixx.object>
+						<sixx.object sixx.id="56" sixx.name="kod" sixx.type="String" >EV1996TV </sixx.object>
+					</sixx.object>
+					<sixx.object sixx.idref="12" />
+				</sixx.object>
+			</sixx.object>
+			<sixx.object sixx.id="57" sixx.type="Association" >
+				<sixx.object sixx.id="58" sixx.name="key" sixx.type="Symbol" >Cvicka2</sixx.object>
+				<sixx.object sixx.id="59" sixx.name="value" sixx.type="Set" >
+					<sixx.object sixx.idref="53" />
+					<sixx.object sixx.idref="31" />
+					<sixx.object sixx.idref="12" />
+					<sixx.object sixx.idref="46" />
+					<sixx.object sixx.idref="42" />
+					<sixx.object sixx.idref="50" />
+					<sixx.object sixx.idref="23" />
+					<sixx.object sixx.idref="16" />
+					<sixx.object sixx.idref="38" />
+				</sixx.object>
+			</sixx.object>
+			<sixx.object sixx.id="60" sixx.type="Association" >
+				<sixx.object sixx.id="61" sixx.name="key" sixx.type="Symbol" >Cvicka5</sixx.object>
+				<sixx.object sixx.id="62" sixx.name="value" sixx.type="Set" >
+					<sixx.object sixx.idref="53" />
+					<sixx.object sixx.idref="31" />
+					<sixx.object sixx.idref="12" />
+					<sixx.object sixx.idref="46" />
+					<sixx.object sixx.idref="42" />
+					<sixx.object sixx.idref="50" />
+					<sixx.object sixx.idref="23" />
+					<sixx.object sixx.idref="16" />
+					<sixx.object sixx.idref="38" />
+				</sixx.object>
+			</sixx.object>
+			<sixx.object sixx.id="63" sixx.type="Association" >
+				<sixx.object sixx.id="64" sixx.name="key" sixx.type="Symbol" >Cvicka9</sixx.object>
+				<sixx.object sixx.id="65" sixx.name="value" sixx.type="Set" >
+					<sixx.object sixx.idref="38" />
+					<sixx.object sixx.idref="42" />
+					<sixx.object sixx.idref="23" />
+					<sixx.object sixx.idref="27" />
+					<sixx.object sixx.idref="16" />
+					<sixx.object sixx.idref="31" />
+					<sixx.object sixx.idref="19" />
+					<sixx.object sixx.idref="46" />
+					<sixx.object sixx.idref="50" />
+					<sixx.object sixx.idref="8" />
+					<sixx.object sixx.idref="53" />
+					<sixx.object sixx.idref="12" />
+				</sixx.object>
+			</sixx.object>
+			<sixx.object sixx.id="66" sixx.type="Association" >
+				<sixx.object sixx.id="67" sixx.name="key" sixx.type="Symbol" >Znamky</sixx.object>
+				<sixx.object sixx.id="68" sixx.name="value" sixx.type="Set" >
+					<sixx.object sixx.id="69" sixx.type="Znamka" >
+						<sixx.object sixx.id="70" sixx.name="date" sixx.type="Date" >4 January 2022</sixx.object>
+						<sixx.object sixx.id="71" sixx.name="cvic" sixx.type="Cvicka" >
+							<sixx.object sixx.id="72" sixx.name="datum" sixx.type="Date" >4 January 2022</sixx.object>
+							<sixx.object sixx.id="73" sixx.name="ucitel" sixx.type="Ucitel" >
+								<sixx.object sixx.id="74" sixx.name="jmeno" sixx.type="String" >David Stoces</sixx.object>
+								<sixx.object sixx.id="75" sixx.name="mistnost" sixx.type="String" >F443</sixx.object>
+								<sixx.object sixx.id="76" sixx.name="odbornost" sixx.type="String" > Ing.</sixx.object>
+							</sixx.object>
+							<sixx.object sixx.id="77" sixx.name="predmet" sixx.type="Predmet" >
+								<sixx.object sixx.id="78" sixx.name="nazev" sixx.type="String" >Objektove modelovani</sixx.object>
+								<sixx.object sixx.id="79" sixx.name="kod" sixx.type="String" >22OBJMD4</sixx.object>
+								<sixx.object sixx.name="ucit" sixx.idref="73" />
+							</sixx.object>
+						</sixx.object>
+						<sixx.object sixx.name="stud" sixx.idref="8" />
+						<sixx.object sixx.id="80" sixx.name="vysledek" sixx.type="SmallInteger" >4</sixx.object>
+						<sixx.object sixx.name="predmet" sixx.idref="77" />
+						<sixx.object sixx.name="vyucujici" sixx.idref="73" />
+					</sixx.object>
+					<sixx.object sixx.id="81" sixx.type="Znamka" >
+						<sixx.object sixx.id="82" sixx.name="date" sixx.type="Date" >24 January 2022</sixx.object>
+						<sixx.object sixx.id="83" sixx.name="cvic" sixx.type="Cvicka" >
+							<sixx.object sixx.id="84" sixx.name="datum" sixx.type="Date" >24 January 2022</sixx.object>
+							<sixx.object sixx.name="ucitel" sixx.idref="73" />
+							<sixx.object sixx.name="predmet" sixx.idref="77" />
+						</sixx.object>
+						<sixx.object sixx.name="stud" sixx.idref="12" />
+						<sixx.object sixx.id="85" sixx.name="vysledek" sixx.type="SmallInteger" >2</sixx.object>
+						<sixx.object sixx.name="predmet" sixx.idref="77" />
+						<sixx.object sixx.name="vyucujici" sixx.idref="73" />
+					</sixx.object>
+					<sixx.object sixx.id="86" sixx.type="Znamka" >
+						<sixx.object sixx.id="87" sixx.name="date" sixx.type="Date" >14 January 2022</sixx.object>
+						<sixx.object sixx.id="88" sixx.name="cvic" sixx.type="Cvicka" >
+							<sixx.object sixx.id="89" sixx.name="datum" sixx.type="Date" >14 January 2022</sixx.object>
+							<sixx.object sixx.name="ucitel" sixx.idref="73" />
+							<sixx.object sixx.name="predmet" sixx.idref="77" />
+						</sixx.object>
+						<sixx.object sixx.name="stud" sixx.idref="12" />
+						<sixx.object sixx.id="90" sixx.name="vysledek" sixx.type="SmallInteger" >3</sixx.object>
+						<sixx.object sixx.name="predmet" sixx.idref="77" />
+						<sixx.object sixx.name="vyucujici" sixx.idref="73" />
+					</sixx.object>
+					<sixx.object sixx.id="91" sixx.type="Znamka" >
+						<sixx.object sixx.id="92" sixx.name="date" sixx.type="Date" >1 January 2022</sixx.object>
+						<sixx.object sixx.id="93" sixx.name="cvic" sixx.type="Cvicka" >
+							<sixx.object sixx.id="94" sixx.name="datum" sixx.type="Date" >1 January 2022</sixx.object>
+							<sixx.object sixx.id="95" sixx.name="ucitel" sixx.type="Ucitel" >
+								<sixx.object sixx.id="96" sixx.name="jmeno" sixx.type="String" >Tereza Dvorakova</sixx.object>
+								<sixx.object sixx.id="97" sixx.name="mistnost" sixx.type="String" >Z123</sixx.object>
+								<sixx.object sixx.id="98" sixx.name="odbornost" sixx.type="String" > Ph.D.</sixx.object>
+							</sixx.object>
+							<sixx.object sixx.id="99" sixx.name="predmet" sixx.type="Predmet" >
+								<sixx.object sixx.id="100" sixx.name="nazev" sixx.type="String" >Matematika</sixx.object>
+								<sixx.object sixx.id="101" sixx.name="kod" sixx.type="String" >22MAT4</sixx.object>
+								<sixx.object sixx.name="ucit" sixx.idref="95" />
+							</sixx.object>
+						</sixx.object>
+						<sixx.object sixx.name="stud" sixx.idref="23" />
+						<sixx.object sixx.name="vysledek" sixx.idref="85" />
+						<sixx.object sixx.name="predmet" sixx.idref="99" />
+						<sixx.object sixx.name="vyucujici" sixx.idref="95" />
+					</sixx.object>
+					<sixx.object sixx.id="102" sixx.type="Znamka" >
+						<sixx.object sixx.id="103" sixx.name="date" sixx.type="Date" >22 January 2022</sixx.object>
+						<sixx.object sixx.id="104" sixx.name="cvic" sixx.type="Cvicka" >
+							<sixx.object sixx.id="105" sixx.name="datum" sixx.type="Date" >22 January 2022</sixx.object>
+							<sixx.object sixx.name="ucitel" sixx.idref="95" />
+							<sixx.object sixx.name="predmet" sixx.idref="99" />
+						</sixx.object>
+						<sixx.object sixx.name="stud" sixx.idref="23" />
+						<sixx.object sixx.name="vysledek" sixx.idref="85" />
+						<sixx.object sixx.name="predmet" sixx.idref="99" />
+						<sixx.object sixx.name="vyucujici" sixx.idref="95" />
+					</sixx.object>
+					<sixx.object sixx.id="106" sixx.type="Znamka" >
+						<sixx.object sixx.id="107" sixx.name="date" sixx.type="Date" >4 January 2022</sixx.object>
+						<sixx.object sixx.name="cvic" sixx.idref="71" />
+						<sixx.object sixx.name="stud" sixx.idref="16" />
+						<sixx.object sixx.name="vysledek" sixx.idref="85" />
+						<sixx.object sixx.name="predmet" sixx.idref="77" />
+						<sixx.object sixx.name="vyucujici" sixx.idref="73" />
+					</sixx.object>
+					<sixx.object sixx.id="108" sixx.type="Znamka" >
+						<sixx.object sixx.id="109" sixx.name="date" sixx.type="Date" >28 January 2022</sixx.object>
+						<sixx.object sixx.id="110" sixx.name="cvic" sixx.type="Cvicka" >
+							<sixx.object sixx.id="111" sixx.name="datum" sixx.type="Date" >28 January 2022</sixx.object>
+							<sixx.object sixx.id="112" sixx.name="ucitel" sixx.type="Ucitel" >
+								<sixx.object sixx.id="113" sixx.name="jmeno" sixx.type="String" >Michal Buchtela</sixx.object>
+								<sixx.object sixx.id="114" sixx.name="mistnost" sixx.type="String" >E552</sixx.object>
+								<sixx.object sixx.id="115" sixx.name="odbornost" sixx.type="String" > Ing.</sixx.object>
+							</sixx.object>
+							<sixx.object sixx.id="116" sixx.name="predmet" sixx.type="Predmet" >
+								<sixx.object sixx.id="117" sixx.name="nazev" sixx.type="String" >Architektura pocitacu</sixx.object>
+								<sixx.object sixx.id="118" sixx.name="kod" sixx.type="String" >22ARCHPOC4</sixx.object>
+								<sixx.object sixx.name="ucit" sixx.idref="112" />
+							</sixx.object>
+						</sixx.object>
+						<sixx.object sixx.name="stud" sixx.idref="12" />
+						<sixx.object sixx.name="vysledek" sixx.idref="85" />
+						<sixx.object sixx.name="predmet" sixx.idref="116" />
+						<sixx.object sixx.name="vyucujici" sixx.idref="112" />
+					</sixx.object>
+					<sixx.object sixx.id="119" sixx.type="Znamka" >
+						<sixx.object sixx.id="120" sixx.name="date" sixx.type="Date" >12 January 2022</sixx.object>
+						<sixx.object sixx.id="121" sixx.name="cvic" sixx.type="Cvicka" >
+							<sixx.object sixx.id="122" sixx.name="datum" sixx.type="Date" >12 January 2022</sixx.object>
+							<sixx.object sixx.name="ucitel" sixx.idref="95" />
+							<sixx.object sixx.name="predmet" sixx.idref="99" />
+						</sixx.object>
+						<sixx.object sixx.name="stud" sixx.idref="23" />
+						<sixx.object sixx.name="vysledek" sixx.idref="90" />
+						<sixx.object sixx.name="predmet" sixx.idref="99" />
+						<sixx.object sixx.name="vyucujici" sixx.idref="95" />
+					</sixx.object>
+					<sixx.object sixx.id="123" sixx.type="Znamka" >
+						<sixx.object sixx.id="124" sixx.name="date" sixx.type="Date" >28 January 2022</sixx.object>
+						<sixx.object sixx.name="cvic" sixx.idref="110" />
+						<sixx.object sixx.name="stud" sixx.idref="23" />
+						<sixx.object sixx.id="125" sixx.name="vysledek" sixx.type="SmallInteger" >1</sixx.object>
+						<sixx.object sixx.name="predmet" sixx.idref="116" />
+						<sixx.object sixx.name="vyucujici" sixx.idref="112" />
+					</sixx.object>
+					<sixx.object sixx.id="126" sixx.type="Znamka" >
+						<sixx.object sixx.id="127" sixx.name="date" sixx.type="Date" >1 January 2022</sixx.object>
+						<sixx.object sixx.name="cvic" sixx.idref="93" />
+						<sixx.object sixx.name="stud" sixx.idref="16" />
+						<sixx.object sixx.name="vysledek" sixx.idref="90" />
+						<sixx.object sixx.name="predmet" sixx.idref="99" />
+						<sixx.object sixx.name="vyucujici" sixx.idref="95" />
+					</sixx.object>
+					<sixx.object sixx.id="128" sixx.type="Znamka" >
+						<sixx.object sixx.id="129" sixx.name="date" sixx.type="Date" >18 January 2022</sixx.object>
+						<sixx.object sixx.id="130" sixx.name="cvic" sixx.type="Cvicka" >
+							<sixx.object sixx.id="131" sixx.name="datum" sixx.type="Date" >18 January 2022</sixx.object>
+							<sixx.object sixx.name="ucitel" sixx.idref="112" />
+							<sixx.object sixx.name="predmet" sixx.idref="116" />
+						</sixx.object>
+						<sixx.object sixx.name="stud" sixx.idref="12" />
+						<sixx.object sixx.name="vysledek" sixx.idref="85" />
+						<sixx.object sixx.name="predmet" sixx.idref="116" />
+						<sixx.object sixx.name="vyucujici" sixx.idref="112" />
+					</sixx.object>
+					<sixx.object sixx.id="132" sixx.type="Znamka" >
+						<sixx.object sixx.id="133" sixx.name="date" sixx.type="Date" >28 January 2022</sixx.object>
+						<sixx.object sixx.name="cvic" sixx.idref="110" />
+						<sixx.object sixx.name="stud" sixx.idref="38" />
+						<sixx.object sixx.name="vysledek" sixx.idref="90" />
+						<sixx.object sixx.name="predmet" sixx.idref="116" />
+						<sixx.object sixx.name="vyucujici" sixx.idref="112" />
+					</sixx.object>
+					<sixx.object sixx.id="134" sixx.type="Znamka" >
+						<sixx.object sixx.id="135" sixx.name="date" sixx.type="Date" >8 January 2022</sixx.object>
+						<sixx.object sixx.id="136" sixx.name="cvic" sixx.type="Cvicka" >
+							<sixx.object sixx.id="137" sixx.name="datum" sixx.type="Date" >8 January 2022</sixx.object>
+							<sixx.object sixx.name="ucitel" sixx.idref="112" />
+							<sixx.object sixx.name="predmet" sixx.idref="116" />
+						</sixx.object>
+						<sixx.object sixx.name="stud" sixx.idref="8" />
+						<sixx.object sixx.name="vysledek" sixx.idref="85" />
+						<sixx.object sixx.name="predmet" sixx.idref="116" />
+						<sixx.object sixx.name="vyucujici" sixx.idref="112" />
+					</sixx.object>
+					<sixx.object sixx.id="138" sixx.type="Znamka" >
+						<sixx.object sixx.id="139" sixx.name="date" sixx.type="Date" >28 January 2022</sixx.object>
+						<sixx.object sixx.name="cvic" sixx.idref="110" />
+						<sixx.object sixx.name="stud" sixx.idref="16" />
+						<sixx.object sixx.name="vysledek" sixx.idref="90" />
+						<sixx.object sixx.name="predmet" sixx.idref="116" />
+						<sixx.object sixx.name="vyucujici" sixx.idref="112" />
+					</sixx.object>
+					<sixx.object sixx.id="140" sixx.type="Znamka" >
+						<sixx.object sixx.id="141" sixx.name="date" sixx.type="Date" >14 January 2022</sixx.object>
+						<sixx.object sixx.name="cvic" sixx.idref="88" />
+						<sixx.object sixx.name="stud" sixx.idref="42" />
+						<sixx.object sixx.name="vysledek" sixx.idref="90" />
+						<sixx.object sixx.name="predmet" sixx.idref="77" />
+						<sixx.object sixx.name="vyucujici" sixx.idref="73" />
+					</sixx.object>
+					<sixx.object sixx.id="142" sixx.type="Znamka" >
+						<sixx.object sixx.id="143" sixx.name="date" sixx.type="Date" >24 January 2022</sixx.object>
+						<sixx.object sixx.name="cvic" sixx.idref="83" />
+						<sixx.object sixx.name="stud" sixx.idref="38" />
+						<sixx.object sixx.name="vysledek" sixx.idref="85" />
+						<sixx.object sixx.name="predmet" sixx.idref="77" />
+						<sixx.object sixx.name="vyucujici" sixx.idref="73" />
+					</sixx.object>
+					<sixx.object sixx.id="144" sixx.type="Znamka" >
+						<sixx.object sixx.id="145" sixx.name="date" sixx.type="Date" >28 January 2022</sixx.object>
+						<sixx.object sixx.name="cvic" sixx.idref="110" />
+						<sixx.object sixx.name="stud" sixx.idref="31" />
+						<sixx.object sixx.name="vysledek" sixx.idref="80" />
+						<sixx.object sixx.name="predmet" sixx.idref="116" />
+						<sixx.object sixx.name="vyucujici" sixx.idref="112" />
+					</sixx.object>
+					<sixx.object sixx.id="146" sixx.type="Znamka" >
+						<sixx.object sixx.id="147" sixx.name="date" sixx.type="Date" >4 January 2022</sixx.object>
+						<sixx.object sixx.name="cvic" sixx.idref="71" />
+						<sixx.object sixx.name="stud" sixx.idref="27" />
+						<sixx.object sixx.name="vysledek" sixx.idref="80" />
+						<sixx.object sixx.name="predmet" sixx.idref="77" />
+						<sixx.object sixx.name="vyucujici" sixx.idref="73" />
+					</sixx.object>
+					<sixx.object sixx.id="148" sixx.type="Znamka" >
+						<sixx.object sixx.id="149" sixx.name="date" sixx.type="Date" >24 January 2022</sixx.object>
+						<sixx.object sixx.name="cvic" sixx.idref="83" />
+						<sixx.object sixx.name="stud" sixx.idref="16" />
+						<sixx.object sixx.name="vysledek" sixx.idref="85" />
+						<sixx.object sixx.name="predmet" sixx.idref="77" />
+						<sixx.object sixx.name="vyucujici" sixx.idref="73" />
+					</sixx.object>
+					<sixx.object sixx.id="150" sixx.type="Znamka" >
+						<sixx.object sixx.id="151" sixx.name="date" sixx.type="Date" >18 January 2022</sixx.object>
+						<sixx.object sixx.name="cvic" sixx.idref="130" />
+						<sixx.object sixx.name="stud" sixx.idref="16" />
+						<sixx.object sixx.name="vysledek" sixx.idref="90" />
+						<sixx.object sixx.name="predmet" sixx.idref="116" />
+						<sixx.object sixx.name="vyucujici" sixx.idref="112" />
+					</sixx.object>
+					<sixx.object sixx.id="152" sixx.type="Znamka" >
+						<sixx.object sixx.id="153" sixx.name="date" sixx.type="Date" >22 January 2022</sixx.object>
+						<sixx.object sixx.name="cvic" sixx.idref="104" />
+						<sixx.object sixx.name="stud" sixx.idref="38" />
+						<sixx.object sixx.name="vysledek" sixx.idref="90" />
+						<sixx.object sixx.name="predmet" sixx.idref="99" />
+						<sixx.object sixx.name="vyucujici" sixx.idref="95" />
+					</sixx.object>
+					<sixx.object sixx.id="154" sixx.type="Znamka" >
+						<sixx.object sixx.id="155" sixx.name="date" sixx.type="Date" >14 January 2022</sixx.object>
+						<sixx.object sixx.name="cvic" sixx.idref="88" />
+						<sixx.object sixx.name="stud" sixx.idref="53" />
+						<sixx.object sixx.name="vysledek" sixx.idref="90" />
+						<sixx.object sixx.name="predmet" sixx.idref="77" />
+						<sixx.object sixx.name="vyucujici" sixx.idref="73" />
+					</sixx.object>
+					<sixx.object sixx.id="156" sixx.type="Znamka" >
+						<sixx.object sixx.id="157" sixx.name="date" sixx.type="Date" >8 January 2022</sixx.object>
+						<sixx.object sixx.name="cvic" sixx.idref="136" />
+						<sixx.object sixx.name="stud" sixx.idref="27" />
+						<sixx.object sixx.name="vysledek" sixx.idref="90" />
+						<sixx.object sixx.name="predmet" sixx.idref="116" />
+						<sixx.object sixx.name="vyucujici" sixx.idref="112" />
+					</sixx.object>
+					<sixx.object sixx.id="158" sixx.type="Znamka" >
+						<sixx.object sixx.id="159" sixx.name="date" sixx.type="Date" >12 January 2022</sixx.object>
+						<sixx.object sixx.name="cvic" sixx.idref="121" />
+						<sixx.object sixx.name="stud" sixx.idref="42" />
+						<sixx.object sixx.name="vysledek" sixx.idref="90" />
+						<sixx.object sixx.name="predmet" sixx.idref="99" />
+						<sixx.object sixx.name="vyucujici" sixx.idref="95" />
+					</sixx.object>
+					<sixx.object sixx.id="160" sixx.type="Znamka" >
+						<sixx.object sixx.id="161" sixx.name="date" sixx.type="Date" >1 January 2022</sixx.object>
+						<sixx.object sixx.name="cvic" sixx.idref="93" />
+						<sixx.object sixx.name="stud" sixx.idref="27" />
+						<sixx.object sixx.name="vysledek" sixx.idref="90" />
+						<sixx.object sixx.name="predmet" sixx.idref="99" />
+						<sixx.object sixx.name="vyucujici" sixx.idref="95" />
+					</sixx.object>
+					<sixx.object sixx.id="162" sixx.type="Znamka" >
+						<sixx.object sixx.id="163" sixx.name="date" sixx.type="Date" >22 January 2022</sixx.object>
+						<sixx.object sixx.name="cvic" sixx.idref="104" />
+						<sixx.object sixx.name="stud" sixx.idref="16" />
+						<sixx.object sixx.name="vysledek" sixx.idref="80" />
+						<sixx.object sixx.name="predmet" sixx.idref="99" />
+						<sixx.object sixx.name="vyucujici" sixx.idref="95" />
+					</sixx.object>
+					<sixx.object sixx.id="164" sixx.type="Znamka" >
+						<sixx.object sixx.id="165" sixx.name="date" sixx.type="Date" >14 January 2022</sixx.object>
+						<sixx.object sixx.name="cvic" sixx.idref="88" />
+						<sixx.object sixx.name="stud" sixx.idref="38" />
+						<sixx.object sixx.name="vysledek" sixx.idref="85" />
+						<sixx.object sixx.name="predmet" sixx.idref="77" />
+						<sixx.object sixx.name="vyucujici" sixx.idref="73" />
+					</sixx.object>
+					<sixx.object sixx.id="166" sixx.type="Znamka" >
+						<sixx.object sixx.id="167" sixx.name="date" sixx.type="Date" >22 January 2022</sixx.object>
+						<sixx.object sixx.name="cvic" sixx.idref="104" />
+						<sixx.object sixx.name="stud" sixx.idref="46" />
+						<sixx.object sixx.name="vysledek" sixx.idref="90" />
+						<sixx.object sixx.name="predmet" sixx.idref="99" />
+						<sixx.object sixx.name="vyucujici" sixx.idref="95" />
+					</sixx.object>
+					<sixx.object sixx.id="168" sixx.type="Znamka" >
+						<sixx.object sixx.id="169" sixx.name="date" sixx.type="Date" >24 January 2022</sixx.object>
+						<sixx.object sixx.name="cvic" sixx.idref="83" />
+						<sixx.object sixx.name="stud" sixx.idref="31" />
+						<sixx.object sixx.name="vysledek" sixx.idref="125" />
+						<sixx.object sixx.name="predmet" sixx.idref="77" />
+						<sixx.object sixx.name="vyucujici" sixx.idref="73" />
+					</sixx.object>
+					<sixx.object sixx.id="170" sixx.type="Znamka" >
+						<sixx.object sixx.id="171" sixx.name="date" sixx.type="Date" >1 January 2022</sixx.object>
+						<sixx.object sixx.name="cvic" sixx.idref="93" />
+						<sixx.object sixx.name="stud" sixx.idref="8" />
+						<sixx.object sixx.name="vysledek" sixx.idref="80" />
+						<sixx.object sixx.name="predmet" sixx.idref="99" />
+						<sixx.object sixx.name="vyucujici" sixx.idref="95" />
+					</sixx.object>
+					<sixx.object sixx.id="172" sixx.type="Znamka" >
+						<sixx.object sixx.id="173" sixx.name="date" sixx.type="Date" >12 January 2022</sixx.object>
+						<sixx.object sixx.name="cvic" sixx.idref="121" />
+						<sixx.object sixx.name="stud" sixx.idref="16" />
+						<sixx.object sixx.name="vysledek" sixx.idref="85" />
+						<sixx.object sixx.name="predmet" sixx.idref="99" />
+						<sixx.object sixx.name="vyucujici" sixx.idref="95" />
+					</sixx.object>
+					<sixx.object sixx.id="174" sixx.type="Znamka" >
+						<sixx.object sixx.id="175" sixx.name="date" sixx.type="Date" >4 January 2022</sixx.object>
+						<sixx.object sixx.name="cvic" sixx.idref="71" />
+						<sixx.object sixx.name="stud" sixx.idref="19" />
+						<sixx.object sixx.name="vysledek" sixx.idref="125" />
+						<sixx.object sixx.name="predmet" sixx.idref="77" />
+						<sixx.object sixx.name="vyucujici" sixx.idref="73" />
+					</sixx.object>
+					<sixx.object sixx.id="176" sixx.type="Znamka" >
+						<sixx.object sixx.id="177" sixx.name="date" sixx.type="Date" >12 January 2022</sixx.object>
+						<sixx.object sixx.name="cvic" sixx.idref="121" />
+						<sixx.object sixx.name="stud" sixx.idref="46" />
+						<sixx.object sixx.name="vysledek" sixx.idref="125" />
+						<sixx.object sixx.name="predmet" sixx.idref="99" />
+						<sixx.object sixx.name="vyucujici" sixx.idref="95" />
+					</sixx.object>
+					<sixx.object sixx.id="178" sixx.type="Znamka" >
+						<sixx.object sixx.id="179" sixx.name="date" sixx.type="Date" >22 January 2022</sixx.object>
+						<sixx.object sixx.name="cvic" sixx.idref="104" />
+						<sixx.object sixx.name="stud" sixx.idref="12" />
+						<sixx.object sixx.name="vysledek" sixx.idref="85" />
+						<sixx.object sixx.name="predmet" sixx.idref="99" />
+						<sixx.object sixx.name="vyucujici" sixx.idref="95" />
+					</sixx.object>
+					<sixx.object sixx.id="180" sixx.type="Znamka" >
+						<sixx.object sixx.id="181" sixx.name="date" sixx.type="Date" >28 January 2022</sixx.object>
+						<sixx.object sixx.name="cvic" sixx.idref="110" />
+						<sixx.object sixx.name="stud" sixx.idref="42" />
+						<sixx.object sixx.name="vysledek" sixx.idref="85" />
+						<sixx.object sixx.name="predmet" sixx.idref="116" />
+						<sixx.object sixx.name="vyucujici" sixx.idref="112" />
+					</sixx.object>
+					<sixx.object sixx.id="182" sixx.type="Znamka" >
+						<sixx.object sixx.id="183" sixx.name="date" sixx.type="Date" >22 January 2022</sixx.object>
+						<sixx.object sixx.name="cvic" sixx.idref="104" />
+						<sixx.object sixx.name="stud" sixx.idref="42" />
+						<sixx.object sixx.name="vysledek" sixx.idref="125" />
+						<sixx.object sixx.name="predmet" sixx.idref="99" />
+						<sixx.object sixx.name="vyucujici" sixx.idref="95" />
+					</sixx.object>
+					<sixx.object sixx.id="184" sixx.type="Znamka" >
+						<sixx.object sixx.id="185" sixx.name="date" sixx.type="Date" >18 January 2022</sixx.object>
+						<sixx.object sixx.name="cvic" sixx.idref="130" />
+						<sixx.object sixx.name="stud" sixx.idref="53" />
+						<sixx.object sixx.name="vysledek" sixx.idref="90" />
+						<sixx.object sixx.name="predmet" sixx.idref="116" />
+						<sixx.object sixx.name="vyucujici" sixx.idref="112" />
+					</sixx.object>
+					<sixx.object sixx.id="186" sixx.type="Znamka" >
+						<sixx.object sixx.id="187" sixx.name="date" sixx.type="Date" >12 January 2022</sixx.object>
+						<sixx.object sixx.name="cvic" sixx.idref="121" />
+						<sixx.object sixx.name="stud" sixx.idref="12" />
+						<sixx.object sixx.name="vysledek" sixx.idref="85" />
+						<sixx.object sixx.name="predmet" sixx.idref="99" />
+						<sixx.object sixx.name="vyucujici" sixx.idref="95" />
+					</sixx.object>
+					<sixx.object sixx.id="188" sixx.type="Znamka" >
+						<sixx.object sixx.id="189" sixx.name="date" sixx.type="Date" >28 January 2022</sixx.object>
+						<sixx.object sixx.name="cvic" sixx.idref="110" />
+						<sixx.object sixx.name="stud" sixx.idref="8" />
+						<sixx.object sixx.name="vysledek" sixx.idref="90" />
+						<sixx.object sixx.name="predmet" sixx.idref="116" />
+						<sixx.object sixx.name="vyucujici" sixx.idref="112" />
+					</sixx.object>
+					<sixx.object sixx.id="190" sixx.type="Znamka" >
+						<sixx.object sixx.id="191" sixx.name="date" sixx.type="Date" >12 January 2022</sixx.object>
+						<sixx.object sixx.name="cvic" sixx.idref="121" />
+						<sixx.object sixx.name="stud" sixx.idref="38" />
+						<sixx.object sixx.name="vysledek" sixx.idref="125" />
+						<sixx.object sixx.name="predmet" sixx.idref="99" />
+						<sixx.object sixx.name="vyucujici" sixx.idref="95" />
+					</sixx.object>
+					<sixx.object sixx.id="192" sixx.type="Znamka" >
+						<sixx.object sixx.id="193" sixx.name="date" sixx.type="Date" >1 January 2022</sixx.object>
+						<sixx.object sixx.name="cvic" sixx.idref="93" />
+						<sixx.object sixx.name="stud" sixx.idref="19" />
+						<sixx.object sixx.name="vysledek" sixx.idref="85" />
+						<sixx.object sixx.name="predmet" sixx.idref="99" />
+						<sixx.object sixx.name="vyucujici" sixx.idref="95" />
+					</sixx.object>
+					<sixx.object sixx.id="194" sixx.type="Znamka" >
+						<sixx.object sixx.id="195" sixx.name="date" sixx.type="Date" >22 January 2022</sixx.object>
+						<sixx.object sixx.name="cvic" sixx.idref="104" />
+						<sixx.object sixx.name="stud" sixx.idref="19" />
+						<sixx.object sixx.name="vysledek" sixx.idref="90" />
+						<sixx.object sixx.name="predmet" sixx.idref="99" />
+						<sixx.object sixx.name="vyucujici" sixx.idref="95" />
+					</sixx.object>
+					<sixx.object sixx.id="196" sixx.type="Znamka" >
+						<sixx.object sixx.id="197" sixx.name="date" sixx.type="Date" >8 January 2022</sixx.object>
+						<sixx.object sixx.name="cvic" sixx.idref="136" />
+						<sixx.object sixx.name="stud" sixx.idref="12" />
+						<sixx.object sixx.name="vysledek" sixx.idref="125" />
+						<sixx.object sixx.name="predmet" sixx.idref="116" />
+						<sixx.object sixx.name="vyucujici" sixx.idref="112" />
+					</sixx.object>
+					<sixx.object sixx.id="198" sixx.type="Znamka" >
+						<sixx.object sixx.id="199" sixx.name="date" sixx.type="Date" >24 January 2022</sixx.object>
+						<sixx.object sixx.name="cvic" sixx.idref="83" />
+						<sixx.object sixx.name="stud" sixx.idref="42" />
+						<sixx.object sixx.name="vysledek" sixx.idref="125" />
+						<sixx.object sixx.name="predmet" sixx.idref="77" />
+						<sixx.object sixx.name="vyucujici" sixx.idref="73" />
+					</sixx.object>
+					<sixx.object sixx.id="200" sixx.type="Znamka" >
+						<sixx.object sixx.id="201" sixx.name="date" sixx.type="Date" >18 January 2022</sixx.object>
+						<sixx.object sixx.name="cvic" sixx.idref="130" />
+						<sixx.object sixx.name="stud" sixx.idref="46" />
+						<sixx.object sixx.name="vysledek" sixx.idref="125" />
+						<sixx.object sixx.name="predmet" sixx.idref="116" />
+						<sixx.object sixx.name="vyucujici" sixx.idref="112" />
+					</sixx.object>
+					<sixx.object sixx.id="202" sixx.type="Znamka" >
+						<sixx.object sixx.id="203" sixx.name="date" sixx.type="Date" >28 January 2022</sixx.object>
+						<sixx.object sixx.name="cvic" sixx.idref="110" />
+						<sixx.object sixx.name="stud" sixx.idref="50" />
+						<sixx.object sixx.name="vysledek" sixx.idref="80" />
+						<sixx.object sixx.name="predmet" sixx.idref="116" />
+						<sixx.object sixx.name="vyucujici" sixx.idref="112" />
+					</sixx.object>
+					<sixx.object sixx.id="204" sixx.type="Znamka" >
+						<sixx.object sixx.id="205" sixx.name="date" sixx.type="Date" >8 January 2022</sixx.object>
+						<sixx.object sixx.name="cvic" sixx.idref="136" />
+						<sixx.object sixx.name="stud" sixx.idref="23" />
+						<sixx.object sixx.name="vysledek" sixx.idref="80" />
+						<sixx.object sixx.name="predmet" sixx.idref="116" />
+						<sixx.object sixx.name="vyucujici" sixx.idref="112" />
+					</sixx.object>
+					<sixx.object sixx.id="206" sixx.type="Znamka" >
+						<sixx.object sixx.id="207" sixx.name="date" sixx.type="Date" >24 January 2022</sixx.object>
+						<sixx.object sixx.name="cvic" sixx.idref="83" />
+						<sixx.object sixx.name="stud" sixx.idref="8" />
+						<sixx.object sixx.name="vysledek" sixx.idref="85" />
+						<sixx.object sixx.name="predmet" sixx.idref="77" />
+						<sixx.object sixx.name="vyucujici" sixx.idref="73" />
+					</sixx.object>
+					<sixx.object sixx.id="208" sixx.type="Znamka" >
+						<sixx.object sixx.id="209" sixx.name="date" sixx.type="Date" >18 January 2022</sixx.object>
+						<sixx.object sixx.name="cvic" sixx.idref="130" />
+						<sixx.object sixx.name="stud" sixx.idref="42" />
+						<sixx.object sixx.name="vysledek" sixx.idref="125" />
+						<sixx.object sixx.name="predmet" sixx.idref="116" />
+						<sixx.object sixx.name="vyucujici" sixx.idref="112" />
+					</sixx.object>
+					<sixx.object sixx.id="210" sixx.type="Znamka" >
+						<sixx.object sixx.id="211" sixx.name="date" sixx.type="Date" >28 January 2022</sixx.object>
+						<sixx.object sixx.name="cvic" sixx.idref="110" />
+						<sixx.object sixx.name="stud" sixx.idref="53" />
+						<sixx.object sixx.name="vysledek" sixx.idref="85" />
+						<sixx.object sixx.name="predmet" sixx.idref="116" />
+						<sixx.object sixx.name="vyucujici" sixx.idref="112" />
+					</sixx.object>
+					<sixx.object sixx.id="212" sixx.type="Znamka" >
+						<sixx.object sixx.id="213" sixx.name="date" sixx.type="Date" >28 January 2022</sixx.object>
+						<sixx.object sixx.name="cvic" sixx.idref="110" />
+						<sixx.object sixx.name="stud" sixx.idref="19" />
+						<sixx.object sixx.name="vysledek" sixx.idref="125" />
+						<sixx.object sixx.name="predmet" sixx.idref="116" />
+						<sixx.object sixx.name="vyucujici" sixx.idref="112" />
+					</sixx.object>
+					<sixx.object sixx.id="214" sixx.type="Znamka" >
+						<sixx.object sixx.id="215" sixx.name="date" sixx.type="Date" >24 January 2022</sixx.object>
+						<sixx.object sixx.name="cvic" sixx.idref="83" />
+						<sixx.object sixx.name="stud" sixx.idref="50" />
+						<sixx.object sixx.name="vysledek" sixx.idref="85" />
+						<sixx.object sixx.name="predmet" sixx.idref="77" />
+						<sixx.object sixx.name="vyucujici" sixx.idref="73" />
+					</sixx.object>
+					<sixx.object sixx.id="216" sixx.type="Znamka" >
+						<sixx.object sixx.id="217" sixx.name="date" sixx.type="Date" >18 January 2022</sixx.object>
+						<sixx.object sixx.name="cvic" sixx.idref="130" />
+						<sixx.object sixx.name="stud" sixx.idref="50" />
+						<sixx.object sixx.name="vysledek" sixx.idref="85" />
+						<sixx.object sixx.name="predmet" sixx.idref="116" />
+						<sixx.object sixx.name="vyucujici" sixx.idref="112" />
+					</sixx.object>
+					<sixx.object sixx.id="218" sixx.type="Znamka" >
+						<sixx.object sixx.id="219" sixx.name="date" sixx.type="Date" >14 January 2022</sixx.object>
+						<sixx.object sixx.name="cvic" sixx.idref="88" />
+						<sixx.object sixx.name="stud" sixx.idref="50" />
+						<sixx.object sixx.name="vysledek" sixx.idref="90" />
+						<sixx.object sixx.name="predmet" sixx.idref="77" />
+						<sixx.object sixx.name="vyucujici" sixx.idref="73" />
+					</sixx.object>
+					<sixx.object sixx.id="220" sixx.type="Znamka" >
+						<sixx.object sixx.id="221" sixx.name="date" sixx.type="Date" >8 January 2022</sixx.object>
+						<sixx.object sixx.name="cvic" sixx.idref="136" />
+						<sixx.object sixx.name="stud" sixx.idref="19" />
+						<sixx.object sixx.name="vysledek" sixx.idref="85" />
+						<sixx.object sixx.name="predmet" sixx.idref="116" />
+						<sixx.object sixx.name="vyucujici" sixx.idref="112" />
+					</sixx.object>
+					<sixx.object sixx.id="222" sixx.type="Znamka" >
+						<sixx.object sixx.id="223" sixx.name="date" sixx.type="Date" >28 January 2022</sixx.object>
+						<sixx.object sixx.name="cvic" sixx.idref="110" />
+						<sixx.object sixx.name="stud" sixx.idref="27" />
+						<sixx.object sixx.name="vysledek" sixx.idref="90" />
+						<sixx.object sixx.name="predmet" sixx.idref="116" />
+						<sixx.object sixx.name="vyucujici" sixx.idref="112" />
+					</sixx.object>
+					<sixx.object sixx.id="224" sixx.type="Znamka" >
+						<sixx.object sixx.id="225" sixx.name="date" sixx.type="Date" >28 January 2022</sixx.object>
+						<sixx.object sixx.name="cvic" sixx.idref="110" />
+						<sixx.object sixx.name="stud" sixx.idref="46" />
+						<sixx.object sixx.name="vysledek" sixx.idref="90" />
+						<sixx.object sixx.name="predmet" sixx.idref="116" />
+						<sixx.object sixx.name="vyucujici" sixx.idref="112" />
+					</sixx.object>
+					<sixx.object sixx.id="226" sixx.type="Znamka" >
+						<sixx.object sixx.id="227" sixx.name="date" sixx.type="Date" >4 January 2022</sixx.object>
+						<sixx.object sixx.name="cvic" sixx.idref="71" />
+						<sixx.object sixx.name="stud" sixx.idref="31" />
+						<sixx.object sixx.name="vysledek" sixx.idref="125" />
+						<sixx.object sixx.name="predmet" sixx.idref="77" />
+						<sixx.object sixx.name="vyucujici" sixx.idref="73" />
+					</sixx.object>
+					<sixx.object sixx.id="228" sixx.type="Znamka" >
+						<sixx.object sixx.id="229" sixx.name="date" sixx.type="Date" >24 January 2022</sixx.object>
+						<sixx.object sixx.name="cvic" sixx.idref="83" />
+						<sixx.object sixx.name="stud" sixx.idref="23" />
+						<sixx.object sixx.name="vysledek" sixx.idref="90" />
+						<sixx.object sixx.name="predmet" sixx.idref="77" />
+						<sixx.object sixx.name="vyucujici" sixx.idref="73" />
+					</sixx.object>
+					<sixx.object sixx.id="230" sixx.type="Znamka" >
+						<sixx.object sixx.id="231" sixx.name="date" sixx.type="Date" >14 January 2022</sixx.object>
+						<sixx.object sixx.name="cvic" sixx.idref="88" />
+						<sixx.object sixx.name="stud" sixx.idref="46" />
+						<sixx.object sixx.name="vysledek" sixx.idref="85" />
+						<sixx.object sixx.name="predmet" sixx.idref="77" />
+						<sixx.object sixx.name="vyucujici" sixx.idref="73" />
+					</sixx.object>
+					<sixx.object sixx.id="232" sixx.type="Znamka" >
+						<sixx.object sixx.id="233" sixx.name="date" sixx.type="Date" >24 January 2022</sixx.object>
+						<sixx.object sixx.name="cvic" sixx.idref="83" />
+						<sixx.object sixx.name="stud" sixx.idref="53" />
+						<sixx.object sixx.name="vysledek" sixx.idref="125" />
+						<sixx.object sixx.name="predmet" sixx.idref="77" />
+						<sixx.object sixx.name="vyucujici" sixx.idref="73" />
+					</sixx.object>
+					<sixx.object sixx.id="234" sixx.type="Znamka" >
+						<sixx.object sixx.id="235" sixx.name="date" sixx.type="Date" >8 January 2022</sixx.object>
+						<sixx.object sixx.name="cvic" sixx.idref="136" />
+						<sixx.object sixx.name="stud" sixx.idref="16" />
+						<sixx.object sixx.name="vysledek" sixx.idref="90" />
+						<sixx.object sixx.name="predmet" sixx.idref="116" />
+						<sixx.object sixx.name="vyucujici" sixx.idref="112" />
+					</sixx.object>
+					<sixx.object sixx.id="236" sixx.type="Znamka" >
+						<sixx.object sixx.id="237" sixx.name="date" sixx.type="Date" >22 January 2022</sixx.object>
+						<sixx.object sixx.name="cvic" sixx.idref="104" />
+						<sixx.object sixx.name="stud" sixx.idref="50" />
+						<sixx.object sixx.name="vysledek" sixx.idref="85" />
+						<sixx.object sixx.name="predmet" sixx.idref="99" />
+						<sixx.object sixx.name="vyucujici" sixx.idref="95" />
+					</sixx.object>
+					<sixx.object sixx.id="238" sixx.type="Znamka" >
+						<sixx.object sixx.id="239" sixx.name="date" sixx.type="Date" >12 January 2022</sixx.object>
+						<sixx.object sixx.name="cvic" sixx.idref="121" />
+						<sixx.object sixx.name="stud" sixx.idref="31" />
+						<sixx.object sixx.name="vysledek" sixx.idref="80" />
+						<sixx.object sixx.name="predmet" sixx.idref="99" />
+						<sixx.object sixx.name="vyucujici" sixx.idref="95" />
+					</sixx.object>
+					<sixx.object sixx.id="240" sixx.type="Znamka" >
+						<sixx.object sixx.id="241" sixx.name="date" sixx.type="Date" >4 January 2022</sixx.object>
+						<sixx.object sixx.name="cvic" sixx.idref="71" />
+						<sixx.object sixx.name="stud" sixx.idref="23" />
+						<sixx.object sixx.name="vysledek" sixx.idref="125" />
+						<sixx.object sixx.name="predmet" sixx.idref="77" />
+						<sixx.object sixx.name="vyucujici" sixx.idref="73" />
+					</sixx.object>
+					<sixx.object sixx.id="242" sixx.type="Znamka" >
+						<sixx.object sixx.id="243" sixx.name="date" sixx.type="Date" >24 January 2022</sixx.object>
+						<sixx.object sixx.name="cvic" sixx.idref="83" />
+						<sixx.object sixx.name="stud" sixx.idref="27" />
+						<sixx.object sixx.name="vysledek" sixx.idref="80" />
+						<sixx.object sixx.name="predmet" sixx.idref="77" />
+						<sixx.object sixx.name="vyucujici" sixx.idref="73" />
+					</sixx.object>
+					<sixx.object sixx.id="244" sixx.type="Znamka" >
+						<sixx.object sixx.id="245" sixx.name="date" sixx.type="Date" >14 January 2022</sixx.object>
+						<sixx.object sixx.name="cvic" sixx.idref="88" />
+						<sixx.object sixx.name="stud" sixx.idref="16" />
+						<sixx.object sixx.name="vysledek" sixx.idref="85" />
+						<sixx.object sixx.name="predmet" sixx.idref="77" />
+						<sixx.object sixx.name="vyucujici" sixx.idref="73" />
+					</sixx.object>
+					<sixx.object sixx.id="246" sixx.type="Znamka" >
+						<sixx.object sixx.id="247" sixx.name="date" sixx.type="Date" >24 January 2022</sixx.object>
+						<sixx.object sixx.name="cvic" sixx.idref="83" />
+						<sixx.object sixx.name="stud" sixx.idref="46" />
+						<sixx.object sixx.name="vysledek" sixx.idref="125" />
+						<sixx.object sixx.name="predmet" sixx.idref="77" />
+						<sixx.object sixx.name="vyucujici" sixx.idref="73" />
+					</sixx.object>
+					<sixx.object sixx.id="248" sixx.type="Znamka" >
+						<sixx.object sixx.id="249" sixx.name="date" sixx.type="Date" >22 January 2022</sixx.object>
+						<sixx.object sixx.name="cvic" sixx.idref="104" />
+						<sixx.object sixx.name="stud" sixx.idref="8" />
+						<sixx.object sixx.name="vysledek" sixx.idref="80" />
+						<sixx.object sixx.name="predmet" sixx.idref="99" />
+						<sixx.object sixx.name="vyucujici" sixx.idref="95" />
+					</sixx.object>
+					<sixx.object sixx.id="250" sixx.type="Znamka" >
+						<sixx.object sixx.id="251" sixx.name="date" sixx.type="Date" >1 January 2022</sixx.object>
+						<sixx.object sixx.name="cvic" sixx.idref="93" />
+						<sixx.object sixx.name="stud" sixx.idref="12" />
+						<sixx.object sixx.name="vysledek" sixx.idref="125" />
+						<sixx.object sixx.name="predmet" sixx.idref="99" />
+						<sixx.object sixx.name="vyucujici" sixx.idref="95" />
+					</sixx.object>
+					<sixx.object sixx.id="252" sixx.type="Znamka" >
+						<sixx.object sixx.id="253" sixx.name="date" sixx.type="Date" >22 January 2022</sixx.object>
+						<sixx.object sixx.name="cvic" sixx.idref="104" />
+						<sixx.object sixx.name="stud" sixx.idref="53" />
+						<sixx.object sixx.name="vysledek" sixx.idref="125" />
+						<sixx.object sixx.name="predmet" sixx.idref="99" />
+						<sixx.object sixx.name="vyucujici" sixx.idref="95" />
+					</sixx.object>
+				</sixx.object>
+			</sixx.object>
+			<sixx.object sixx.id="254" sixx.type="Association" >
+				<sixx.object sixx.id="255" sixx.name="key" sixx.type="Symbol" >Ucitele</sixx.object>
+				<sixx.object sixx.id="256" sixx.name="value" sixx.type="Set" >
+					<sixx.object sixx.idref="95" />
+					<sixx.object sixx.idref="73" />
+					<sixx.object sixx.idref="112" />
+				</sixx.object>
+			</sixx.object>
+			<sixx.object sixx.id="257" sixx.type="Association" >
+				<sixx.object sixx.id="258" sixx.name="key" sixx.type="Symbol" >Cvicka1</sixx.object>
+				<sixx.object sixx.id="259" sixx.name="value" sixx.type="Set" >
+					<sixx.object sixx.idref="8" />
+					<sixx.object sixx.idref="12" />
+					<sixx.object sixx.idref="16" />
+					<sixx.object sixx.idref="19" />
+					<sixx.object sixx.idref="23" />
+					<sixx.object sixx.idref="27" />
+					<sixx.object sixx.idref="31" />
+				</sixx.object>
+			</sixx.object>
+			<sixx.object sixx.id="260" sixx.type="Association" >
+				<sixx.object sixx.id="261" sixx.name="key" sixx.type="Symbol" >Predmety</sixx.object>
+				<sixx.object sixx.id="262" sixx.name="value" sixx.type="Set" >
+					<sixx.object sixx.idref="116" />
+					<sixx.object sixx.idref="99" />
+					<sixx.object sixx.idref="77" />
+				</sixx.object>
+			</sixx.object>
+			<sixx.object sixx.id="263" sixx.type="Association" >
+				<sixx.object sixx.id="264" sixx.name="key" sixx.type="Symbol" >Cvicka8</sixx.object>
+				<sixx.object sixx.id="265" sixx.name="value" sixx.type="Set" >
+					<sixx.object sixx.idref="53" />
+					<sixx.object sixx.idref="31" />
+					<sixx.object sixx.idref="12" />
+					<sixx.object sixx.idref="46" />
+					<sixx.object sixx.idref="42" />
+					<sixx.object sixx.idref="50" />
+					<sixx.object sixx.idref="23" />
+					<sixx.object sixx.idref="16" />
+					<sixx.object sixx.idref="38" />
+				</sixx.object>
+			</sixx.object>
+			<sixx.object sixx.id="266" sixx.type="Association" >
+				<sixx.object sixx.id="267" sixx.name="key" sixx.type="Symbol" >Cvicka7</sixx.object>
+				<sixx.object sixx.id="268" sixx.name="value" sixx.type="Set" >
+					<sixx.object sixx.idref="8" />
+					<sixx.object sixx.idref="12" />
+					<sixx.object sixx.idref="16" />
+					<sixx.object sixx.idref="19" />
+					<sixx.object sixx.idref="23" />
+					<sixx.object sixx.idref="27" />
+					<sixx.object sixx.idref="31" />
+				</sixx.object>
+			</sixx.object>
+			<sixx.object sixx.id="269" sixx.type="Association" >
+				<sixx.object sixx.id="270" sixx.name="key" sixx.type="Symbol" >Cvicka6</sixx.object>
+				<sixx.object sixx.id="271" sixx.name="value" sixx.type="Set" >
+					<sixx.object sixx.idref="38" />
+					<sixx.object sixx.idref="42" />
+					<sixx.object sixx.idref="23" />
+					<sixx.object sixx.idref="27" />
+					<sixx.object sixx.idref="16" />
+					<sixx.object sixx.idref="31" />
+					<sixx.object sixx.idref="19" />
+					<sixx.object sixx.idref="46" />
+					<sixx.object sixx.idref="50" />
+					<sixx.object sixx.idref="8" />
+					<sixx.object sixx.idref="53" />
+					<sixx.object sixx.idref="12" />
+				</sixx.object>
+			</sixx.object>
+			<sixx.object sixx.id="272" sixx.type="Association" >
+				<sixx.object sixx.id="273" sixx.name="key" sixx.type="Symbol" >Cvicka3</sixx.object>
+				<sixx.object sixx.id="274" sixx.name="value" sixx.type="Set" >
+					<sixx.object sixx.idref="38" />
+					<sixx.object sixx.idref="42" />
+					<sixx.object sixx.idref="23" />
+					<sixx.object sixx.idref="27" />
+					<sixx.object sixx.idref="16" />
+					<sixx.object sixx.idref="31" />
+					<sixx.object sixx.idref="19" />
+					<sixx.object sixx.idref="46" />
+					<sixx.object sixx.idref="50" />
+					<sixx.object sixx.idref="8" />
+					<sixx.object sixx.idref="53" />
+					<sixx.object sixx.idref="12" />
+				</sixx.object>
+			</sixx.object>
+			<sixx.object sixx.id="275" sixx.type="Association" >
+				<sixx.object sixx.id="276" sixx.name="key" sixx.type="Symbol" >Cvicky</sixx.object>
+				<sixx.object sixx.id="277" sixx.name="value" sixx.type="Set" >
+					<sixx.object sixx.idref="71" />
+					<sixx.object sixx.idref="110" />
+					<sixx.object sixx.idref="104" />
+					<sixx.object sixx.idref="130" />
+					<sixx.object sixx.idref="83" />
+					<sixx.object sixx.idref="136" />
+					<sixx.object sixx.idref="93" />
+					<sixx.object sixx.idref="121" />
+					<sixx.object sixx.idref="88" />
+				</sixx.object>
+			</sixx.object>
+		</sixx.object>
+		<sixx.object sixx.id="278" sixx.name="workspaceText" sixx.type="String" >
+&quot;DOTAZ1 zkontrolovat&#44; zda byl student &#40;Karel Panzer&#41; na cvicce&quot;
+Cvicka1 select: [:x| x jmeno= &apos;Karel Panzner&apos;] 
+
+&quot;DOTAZ2 Vybrat predmet a studenta a zkontrolovat znamky&quot;
+Znamky select: [:x | &#40; x stud jmeno= &apos;Jan Blahut&apos;&#41;  &amp; &#40;x predmet nazev = &apos;Matematika&apos; &#41;] 
+
+&quot;DOTAZ3 Kdy student nebyl uspesen v matematice&quot;
+
+Znamky select: [:x| &#40;x uspesnost= &apos;ne&apos;&#41; &amp; &#40;x stud jmeno = &apos;Petr Smola&apos;&#41; &amp; &#40;x predmet nazev= &apos;Matematika&apos;&#41;]</sixx.object>
+		<sixx.object sixx.id="279" sixx.name="scriptText" sixx.type="String" >
+
+&quot;vytvoreni mnoziny pro tridu&quot;
+
+Studenti := Set new.
+Ucitele := Set new.
+Predmety := Set new.
+Cvicky := Set new.
+Znamky := Set new.
+
+&quot;trydy použitý na abscence&quot;
+Cvicka1 := Set new.
+Cvicka2 := Set new.
+Cvicka3 := Set new.
+Cvicka4 := Set new.
+Cvicka5 := Set new.
+Cvicka6 := Set new.
+Cvicka7 := Set new.
+Cvicka8 := Set new.
+Cvicka9 := Set new.
+
+
+
+&quot;zalozeni noveho studenta&quot;
+
+		
+s1 := Student new. 	&quot;Ukladame datu v class Student&quot;
+s1 jmeno: &apos;Karel Panzner&apos;;  		&quot;Jmeno studenta&quot;
+	kod: &apos;KA1999PA&apos;;  		&quot;kód studenta &#40;používá se pro bezchybnou inicializaci studenta&#41;&quot;
+	rokNarozeni: 1999.	&quot;rok narozeni studenta&quot;
+
+&quot;dal stejny algortmus&#44; ukladame studenti s2- s12&quot;	
+
+s2 := Student new.
+s2 jmeno: &apos;Jan Blahut&apos;;
+	kod: &apos;JA2007BL &apos;;
+	rokNarozeni: 2007.
+
+s3 := Student new.
+s3 jmeno: &apos;Miroslav Pochyla&apos;;
+	kod: &apos;MI2000PO &apos;;
+	rokNarozeni: 2000.
+
+s4 := Student new.
+s4 jmeno: &apos;Vlastimil Fedra&apos;;
+	kod: &apos;VL2001FE &apos;;
+	rokNarozeni: 2001.
+
+s5 := Student new.
+s5 jmeno: &apos;Petr Braun&apos;;
+		kod: &apos;PE1998BR &apos;;
+rokNarozeni: 1998.
+	
+
+s6 := Student new.
+s6 jmeno: &apos;Petr Smola&apos;;
+	kod: &apos;PE1998SM &apos;;
+	rokNarozeni: 1998.
+
+s7 := Student new.
+s7 jmeno: &apos;Marie Linhartova&apos;;
+		kod: &apos;MA2002LI &apos;;
+	rokNarozeni: 2002.
+
+s8 := Student new.
+s8 jmeno: &apos;Gizela Plechacova&apos;;
+	kod: &apos;GI2002PL &apos;;
+	rokNarozeni: 2002.
+
+s9 := Student new.
+s9 jmeno: &apos;Eva Tvrznikova&apos;;
+		kod: &apos;EV1996TV &apos;;
+rokNarozeni: 1996.
+	
+
+s10 := Student new.
+s10 jmeno: &apos;Marek Balko&apos;;
+		kod: &apos;MA1997BA &apos;;
+	rokNarozeni: 1997.
+
+s11 := Student new.
+s11 jmeno: &apos;Dagmar Hejdova&apos;;
+		kod: &apos;DA2003HE &apos;;
+	rokNarozeni: 2003.
+
+s12 := Student new.
+s12	jmeno: &apos;Iva Polochova&apos;;
+	kod: &apos;IV1994PO &apos;;
+	rokNarozeni: 1994.
+
+
+
+&quot;Ulozeni studentu do Set Studenti&quot;
+Studenti add: s1; add: s2; add: s3; add: s4; add: s5; add: s6; add: s7; add: s8; add: s9; add: s10; add: s11; add: s12.
+
+
+
+&quot;Ulozeni studentu do ruznych cvicek&#44; aby jsme mohli kontroloval amscence studentu&quot;
+
+Cvicka1 add: s1; add: s2; add: s3; add: s4; add: s5; add: s6; add: s7.
+Cvicka2 add: s12 ; add: s11 ; add: s10 ; add: s2 ; add: s1 ; add: s6 ; add: s7 ; add: s8 ; add: s9.
+Cvicka3 add: s1 ; add: s2 ; add: s3 ; add: s4 ; add: s5 ; add: s6 ; add: s7 ; add: s8 ; add: s9 ; add: s10 ; add: s11 ; add: s12.
+
+Cvicka4 add: s1; add: s2; add: s3; add: s4; add: s5; add: s6; add: s7.
+Cvicka5 add: s12 ; add: s11 ; add: s10 ; add: s2 ; add: s1 ; add: s6 ; add: s7 ; add: s8 ; add: s9.
+Cvicka6 add: s1 ; add: s2 ; add: s3 ; add: s4 ; add: s5 ; add: s6 ; add: s7 ; add: s8 ; add: s9 ; add: s10 ; add: s11 ; add: s12.
+
+Cvicka7 add: s1; add: s2; add: s3; add: s4; add: s5; add: s6; add: s7.
+Cvicka8 add: s12 ; add: s11 ; add: s10 ; add: s2 ; add: s1 ; add: s6 ; add: s7 ; add: s8 ; add: s9.
+Cvicka9 add: s1 ; add: s2 ; add: s3 ; add: s4 ; add: s5 ; add: s6 ; add: s7 ; add: s8 ; add: s9 ; add: s10 ; add: s11 ; add: s12.
+
+
+&quot;zalozeni noveho vyucujiciho&quot;
+
+u1 := Ucitel new. 		&quot;Ukladame datu v class Ucitel&quot;
+u1 jmeno: &apos;Tereza Dvorakova&apos;; 		&quot;jmeno&quot;
+	odbornost: &apos; Ph.D.&apos;; 		&quot;odbornost&quot; 
+	mistnost: &apos;Z123&apos;. 		&quot;mistnost ve kterou vyucujici ma konzultacni hodiny &#40;pro studenti&#41;&quot;
+	
+
+&quot;stejny postup u2-u3&quot;
+u2 := Ucitel new.
+u2 jmeno: &apos;David Stoces&apos;;
+	odbornost: &apos; Ing.&apos;;
+	mistnost: &apos;F443&apos;.
+	
+
+
+u3 := Ucitel new.
+u3 jmeno: &apos;Michal Buchtela&apos;;
+	odbornost: &apos; Ing.&apos;;
+	mistnost: &apos;E552&apos;.
+
+&quot;Ulozeni vyucujicich do Set Ucitele &quot;
+Ucitele add: u1; add: u2; add: u3.
+
+
+
+
+
+
+&quot;zalozeni noveho predmetu&quot;
+p1 := Predmet new. 	&quot;Ukladame datu v class Predmet&quot;
+p1 nazev: &apos;Matematika&apos;; 	&quot;Nazev&quot;
+	ucit: u1; 		&quot;je odkaz na vyucujiciho&#44; ktery ten predmet uci&quot;
+	kod: &apos;22MAT4&apos;. 	&quot;kód predmetu &#40;používá se pro bezchybnou inicializaci predmetu&#41;&quot;
+	
+&quot;stejny postup p2-p3&quot;
+p2 := Predmet new.
+p2 nazev: &apos;Objektove modelovani&apos;;
+	ucit: u2;
+	kod: &apos;22OBJMD4&apos;.
+
+p3 := Predmet new.
+p3 nazev: &apos;Architektura pocitacu&apos;;
+	ucit: u3;
+	kod: &apos;22ARCHPOC4&apos;.
+
+&quot;Ulozeni predmetu do Set Predmety &quot;
+Predmety add: p1; add: p2; add: p3.
+
+
+
+
+
+
+
+&quot;zalozeni nove cvicky&quot;
+cv1 := Cvicka new. 		&quot;Ukladame datu v class Cvicka&quot;
+cv1 datum: &apos;01-JAN-2022&apos; asDate;	&quot;Datum provedení cvicky&quot;
+	ucitel: u1;	&quot;je odkaz na vyucujiciho&#44; ktery na te cvicce uci&quot;
+	predmet: p1.   &quot;je odkaz na predmet vyučovaný na cvicce &quot; 
+
+
+&quot;stejny postup cv2-cv9&quot;
+cv2 := Cvicka new.
+cv2 datum: &apos;012-JAN-2022&apos; asDate;
+	ucitel: u1;
+	predmet: p1.
+
+
+
+cv3 := Cvicka new.
+cv3 datum: &apos;22-JAN-2022&apos; asDate;
+	ucitel: u1;
+	predmet: p1.
+
+
+cv4 := Cvicka new.
+cv4 datum: &apos;04-JAN-2022&apos; asDate;
+	ucitel: u2;
+	predmet: p2.
+
+
+cv5 := Cvicka new.
+cv5 datum: &apos;14-JAN-2022&apos; asDate;
+	ucitel: u2;
+	predmet: p2.
+
+
+cv6 := Cvicka new.
+cv6 datum: &apos;24-JAN-2022&apos; asDate;
+	ucitel: u2;
+	predmet: p2.
+
+
+cv7 := Cvicka new.
+cv7 datum: &apos;08-JAN-2022&apos; asDate;
+	ucitel: u3;	
+	predmet: p3.
+
+	
+cv8 := Cvicka new.
+cv8 datum: &apos;18-JAN-2022&apos; asDate;
+	ucitel: u3;	
+	predmet: p3.
+	
+
+cv9 := Cvicka new.
+cv9 datum: &apos;28-JAN-2022&apos; asDate;
+	ucitel: u3;
+	predmet: p3.
+
+
+
+&quot;Ulozeni predmetu do Set Predmety &quot;
+Cvicky add: cv1; add: cv2; add: cv3; add: cv4; add: cv5; add: cv6; add: cv7; add: cv8; add: cv9. 
+
+
+
+
+&quot;zalozeni nove znamky&quot;
+zn1 := Znamka new. 	&quot;Ukladame datu v class Znamka&quot;
+zn1 date: &apos;01-JAN-2022&apos; asDate;		&quot;Datum ve kterem hodnocení bylo provedeno&quot;
+	cvic: cv1;	&quot;je odkaz na cvicku ve ktere hodnocení bylo provedeno &quot;
+	stud: s2;		&quot;je odkaz na student&#44; ktery znamku dostal&quot;
+	vysledek: 2;	&quot;znamka&quot;
+	vyucujici: u1;		&quot;je odkaz na vyucujiciho&#44; ktery hodnoceni provedl&quot;
+	predmet: p1.		&quot;je odkaz na predmet ve kterem znamka byla zapsana&quot; 
+
+&quot;stejny postup zn2-zn72&quot;
+
+zn2 := Znamka new.
+zn2 date: &apos;01-JAN-2022&apos; asDate;
+	cvic: cv1;
+	stud: s3;
+	vysledek: 2;
+	vyucujici: u1;
+	predmet: p1.
+
+zn3 := Znamka new.
+zn3 date: &apos;01-JAN-2022&apos; asDate;
+	cvic: cv1;
+	stud: s4;
+	vysledek: 3;
+	vyucujici: u1;
+	predmet: p1.
+
+zn4 := Znamka new.
+zn4 date: &apos;01-JAN-2022&apos; asDate;
+	cvic: cv1;
+	stud: s5;
+	vysledek: 4;
+	vyucujici: u1;
+	predmet: p1.
+
+zn5 := Znamka new.
+zn5 date: &apos;01-JAN-2022&apos; asDate;
+	cvic: cv1;
+	stud: s6;
+	vysledek: 3;
+	vyucujici: u1;
+	predmet: p1.
+
+zn6 := Znamka new.
+zn6 date: &apos;01-JAN-2022&apos; asDate;
+	cvic: cv1;
+	stud: s7;
+	vysledek: 1;
+	vyucujici: u1;
+	predmet: p1.
+
+zn7 := Znamka new.
+zn7 date: &apos;12-JAN-2022&apos; asDate;
+	cvic: cv2;
+	stud: s12;
+	vysledek: 1;
+	vyucujici: u1;
+	predmet: p1.
+
+zn8 := Znamka new.
+zn8 date: &apos;12-JAN-2022&apos; asDate;
+	cvic: cv2;
+	stud: s11;
+	vysledek: 1;
+	vyucujici: u1;
+	predmet: p1.
+
+zn9 := Znamka new.
+zn9 date: &apos;12-JAN-2022&apos; asDate;
+	cvic: cv2;
+	stud: s10;
+	vysledek: 3;
+	vyucujici: u1;
+	predmet: p1.
+
+zn10 := Znamka new.
+zn10 date: &apos;12-JAN-2022&apos; asDate;
+	cvic: cv2;
+	stud: s2;
+	vysledek: 3;
+	vyucujici: u1;
+	predmet: p1.
+
+zn11 := Znamka new.
+zn11 date: &apos;12-JAN-2022&apos; asDate;
+	cvic: cv2;
+	stud: s1;
+	vysledek: 4;
+	vyucujici: u1;
+	predmet: p1.
+
+zn12 := Znamka new.
+zn12 date: &apos;12-JAN-2022&apos; asDate;
+	cvic: cv2;
+	stud: s6;
+	vysledek: 2;
+	vyucujici: u1;
+	predmet: p1.
+
+zn13 := Znamka new.
+zn13 date: &apos;12-JAN-2022&apos; asDate;
+	cvic: cv2;
+	stud: s7;
+	vysledek: 2;
+	vyucujici: u1;
+	predmet: p1.
+
+zn14 := Znamka new.
+zn14 date: &apos;22-JAN-2022&apos; asDate;
+	cvic: cv3;
+	stud: s1;
+	vysledek: 1;
+	vyucujici: u1;
+	predmet: p1.
+
+zn15 := Znamka new.
+zn15 date: &apos;22-JAN-2022&apos; asDate;
+	cvic: cv3;
+	stud: s2;
+	vysledek: 2;
+	vyucujici: u1;
+	predmet: p1.
+
+zn16 := Znamka new.
+zn16 date: &apos;22-JAN-2022&apos; asDate;
+	cvic: cv3;
+	stud: s3;
+	vysledek: 3;
+	vyucujici: u1;
+	predmet: p1.
+
+zn17 := Znamka new.
+zn17 date: &apos;22-JAN-2022&apos; asDate;
+	cvic: cv3;
+	stud: s4;
+	vysledek: 3;
+	vyucujici: u1;
+	predmet: p1.
+
+zn14 := Znamka new.
+zn14 date: &apos;22-JAN-2022&apos; asDate;
+	cvic: cv3;
+	stud: s5;
+	vysledek: 4;
+	vyucujici: u1;
+	predmet: p1.
+
+zn17 := Znamka new.
+zn17 date: &apos;22-JAN-2022&apos; asDate;
+	cvic: cv3;
+	stud: s6;
+	vysledek: 4;
+	vyucujici: u1;
+	predmet: p1.
+
+zn18 := Znamka new.
+zn18 date: &apos;22-JAN-2022&apos; asDate;
+	cvic: cv3;
+	stud: s7;
+	vysledek: 2;
+	vyucujici: u1;
+	predmet: p1.
+
+zn19 := Znamka new.
+zn19 date: &apos;22-JAN-2022&apos; asDate;
+	cvic: cv3;
+	stud: s8;
+	vysledek: 2;
+	vyucujici: u1;
+	predmet: p1.
+
+zn20 := Znamka new.
+zn20 date: &apos;22-JAN-2022&apos; asDate;
+	cvic: cv3;
+	stud: s9;
+	vysledek: 1;
+	vyucujici: u1;
+	predmet: p1.
+
+zn21 := Znamka new.
+zn21 date: &apos;22-JAN-2022&apos; asDate;
+	cvic: cv3;
+	stud: s10;
+	vysledek: 1;
+	vyucujici: u1;
+	predmet: p1.
+
+zn22 := Znamka new.
+zn22 date: &apos;22-JAN-2022&apos; asDate;
+	cvic: cv3;
+	stud: s11;
+	vysledek: 3;
+	vyucujici: u1;
+	predmet: p1.
+
+zn23 := Znamka new.
+zn23 date: &apos;22-JAN-2022&apos; asDate;
+	cvic: cv3;
+	stud: s12;
+	vysledek: 3;
+	vyucujici: u1;
+	predmet: p1.
+
+zn24 := Znamka new.
+zn24 date: &apos;04-JAN-2022&apos; asDate;
+	cvic: cv4;
+	stud: s1;
+	vysledek: 1;
+	vyucujici: u2;
+	predmet: p2.
+
+zn25 := Znamka new.
+zn25 date: &apos;04-JAN-2022&apos; asDate;
+	cvic: cv4;
+	stud: s2;
+	vysledek: 1;
+	vyucujici: u2;
+	predmet: p2.
+
+zn26 := Znamka new.
+zn26 date: &apos;04-JAN-2022&apos; asDate;
+	cvic: cv4;
+	stud: s3;
+	vysledek: 1;
+	vyucujici: u2;
+	predmet: p2.
+
+zn27 := Znamka new.
+zn27 date: &apos;04-JAN-2022&apos; asDate;
+	cvic: cv4;
+	stud: s4;
+	vysledek: 4;
+	vyucujici: u2;
+	predmet: p2.
+
+zn28 := Znamka new.
+zn28 date: &apos;04-JAN-2022&apos; asDate;
+	cvic: cv4;
+	stud: s5;
+	vysledek: 4;
+	vyucujici: u2;
+	predmet: p2.
+
+zn29 := Znamka new.
+zn29 date: &apos;04-JAN-2022&apos; asDate;
+	cvic: cv4;
+	stud: s6;
+	vysledek: 2;
+	vyucujici: u2;
+	predmet: p2.
+
+zn30 := Znamka new.
+zn30 date: &apos;04-JAN-2022&apos; asDate;
+	cvic: cv4;
+	stud: s7;
+	vysledek: 1;
+	vyucujici: u2;
+	predmet: p2.
+
+
+zn30 := Znamka new.
+zn30 date: &apos;14-JAN-2022&apos; asDate;
+	cvic: cv5;
+	stud: s12;
+	vysledek:2 ;
+	vyucujici: u2;
+	predmet: p2.
+
+
+zn31 := Znamka new.
+zn31 date: &apos;14-JAN-2022&apos; asDate;
+	cvic: cv5;
+	stud: s11;
+	vysledek: 2;
+	vyucujici: u2;
+	predmet: p2.
+
+zn32 := Znamka new.
+zn32 date: &apos;14-JAN-2022&apos; asDate;
+	cvic: cv5;
+	stud: s10;
+	vysledek: 3;
+	vyucujici: u2;
+	predmet: p2.
+
+
+zn33 := Znamka new.
+zn33 date: &apos;14-JAN-2022&apos; asDate;
+	cvic: cv5;
+	stud: s6;
+	vysledek: 2;
+	vyucujici: u2;
+	predmet: p2.
+
+zn34 := Znamka new.
+zn34 date: &apos;14-JAN-2022&apos; asDate;
+	cvic: cv5;
+	stud: s7;
+	vysledek: 3;
+	vyucujici: u2;
+	predmet: p2.
+
+zn35 := Znamka new.
+zn35 date: &apos;14-JAN-2022&apos; asDate;
+	cvic: cv5;
+	stud: s8;
+	vysledek: 3;
+	vyucujici: u2;
+	predmet: p2.
+
+zn36 := Znamka new.
+zn36 date: &apos;14-JAN-2022&apos; asDate;
+	cvic: cv5;
+	stud: s9;
+	vysledek: 3;
+	vyucujici: u2;
+	predmet: p2.
+
+
+
+
+
+zn37 := Znamka new.
+zn37 date: &apos;24-JAN-2022&apos; asDate;
+	cvic: cv6;
+	stud: s1;
+	vysledek: 1;
+	vyucujici: u2;
+	predmet: p2.
+
+zn38 := Znamka new.
+zn38 date: &apos;24-JAN-2022&apos; asDate;
+	cvic: cv6;
+	stud: s2;
+	vysledek: 3;
+	vyucujici: u2;
+	predmet: p2.
+
+zn39 := Znamka new.
+zn39 date: &apos;24-JAN-2022&apos; asDate;
+	cvic: cv6;
+	stud: s4;
+	vysledek: 4;
+	vyucujici: u2;
+	predmet: p2.
+
+zn41 := Znamka new.
+zn41 date: &apos;24-JAN-2022&apos; asDate;
+	cvic: cv6;
+	stud: s5;
+	vysledek: 2;
+	vyucujici: u2;
+	predmet: p2.
+
+zn42 := Znamka new.
+zn42 date: &apos;24-JAN-2022&apos; asDate;
+	cvic: cv6;
+	stud: s6;
+	vysledek: 2;
+	vyucujici: u2;
+	predmet: p2.
+
+zn43 := Znamka new.
+zn43 date: &apos;24-JAN-2022&apos; asDate;
+	cvic: cv6;
+	stud: s7;
+	vysledek: 2;
+	vyucujici: u2;
+	predmet: p2.
+
+zn44 := Znamka new.
+zn44 date: &apos;24-JAN-2022&apos; asDate;
+	cvic: cv6;
+	stud: s8;
+	vysledek: 2;
+	vyucujici: u2;
+	predmet: p2.
+
+zn45 := Znamka new.
+zn45 date: &apos;24-JAN-2022&apos; asDate;
+	cvic: cv6;
+	stud: s9;
+	vysledek: 1;
+	vyucujici: u2;
+	predmet: p2.
+
+zn46 := Znamka new.
+zn46 date: &apos;24-JAN-2022&apos; asDate;
+	cvic: cv6;
+	stud: s10;
+	vysledek: 1;
+	vyucujici: u2;
+	predmet: p2.
+
+zn47 := Znamka new.
+zn47 date: &apos;24-JAN-2022&apos; asDate;
+	cvic: cv6;
+	stud: s11;
+	vysledek: 2;
+	vyucujici: u2;
+	predmet: p2.
+
+zn48 := Znamka new.
+zn48 date: &apos;24-JAN-2022&apos; asDate;
+	cvic: cv6;
+	stud: s12;
+	vysledek: 1;
+	vyucujici: u2;
+	predmet: p2.	
+
+
+zn49 := Znamka new.
+zn49 date: &apos;08-JAN-2022&apos; asDate;
+	cvic: cv7;
+	stud: s2;
+	vysledek: 4;
+	vyucujici: u3;
+	predmet: p3.
+
+
+zn50 := Znamka new.
+zn50 date: &apos;08-JAN-2022&apos; asDate;
+	cvic: cv7;
+	stud: s3;
+	vysledek: 2;
+	vyucujici: u3;
+	predmet: p3.
+
+zn51 := Znamka new.
+zn51 date: &apos;08-JAN-2022&apos; asDate;
+	cvic: cv7;
+	stud: s4;
+	vysledek: 3;
+	vyucujici: u3;
+	predmet: p3.
+
+zn52 := Znamka new.
+zn52 date: &apos;08-JAN-2022&apos; asDate;
+	cvic: cv7;
+	stud: s5;
+	vysledek: 2;
+	vyucujici: u3;
+	predmet: p3.
+
+zn53 := Znamka new.
+zn53 date: &apos;08-JAN-2022&apos; asDate;
+	cvic: cv7;
+	stud: s6;
+	vysledek: 3;
+	vyucujici: u3;
+	predmet: p3.
+
+zn54 := Znamka new.
+zn54 date: &apos;08-JAN-2022&apos; asDate;
+	cvic: cv7;
+	stud: s7;
+	vysledek: 1;
+	vyucujici: u3;
+	predmet: p3.
+
+
+zn55 := Znamka new.
+zn55 date: &apos;18-JAN-2022&apos; asDate;
+	cvic: cv8;
+	stud: s10;
+	vysledek: 1;
+	vyucujici: u3;
+	predmet: p3.
+
+zn56 := Znamka new.
+zn56 date: &apos;18-JAN-2022&apos; asDate;
+	cvic: cv8;
+	stud: s6;
+	vysledek: 3;
+	vyucujici: u3;
+	predmet: p3.
+
+zn57 := Znamka new.
+zn57 date: &apos;18-JAN-2022&apos; asDate;
+	cvic: cv8;
+	stud: s7;
+	vysledek: 2;
+	vyucujici: u3;
+	predmet: p3.
+
+zn58 := Znamka new.
+zn58 date: &apos;18-JAN-2022&apos; asDate;
+	cvic: cv8;
+	stud: s8;
+	vysledek: 2;
+	vyucujici: u3;
+	predmet: p3.
+
+zn59 := Znamka new.
+zn59 date: &apos;18-JAN-2022&apos; asDate;
+	cvic: cv8;
+	stud: s9;
+	vysledek: 3;
+	vyucujici: u3;
+	predmet: p3.
+
+zn60 := Znamka new.
+zn60 date: &apos;18-JAN-2022&apos; asDate;
+	cvic: cv8;
+	stud: s12;
+	vysledek: 1;
+	vyucujici: u3;
+	predmet: p3.
+
+zn61 := Znamka new.
+zn61 date: &apos;28-JAN-2022&apos; asDate;
+	cvic: cv9;
+	stud: s1;
+	vysledek: 4;
+	vyucujici: u3;
+	predmet: p3.
+
+zn62 := Znamka new.
+zn62 date: &apos;28-JAN-2022&apos; asDate;
+	cvic: cv9;
+	stud: s2;
+	vysledek: 1;
+	vyucujici: u3;
+	predmet: p3.
+
+zn63 := Znamka new.
+zn63 date: &apos;28-JAN-2022&apos; asDate;
+	cvic: cv9;
+	stud: s3;
+	vysledek: 1;
+	vyucujici: u3;
+	predmet: p3.
+
+zn64 := Znamka new.
+zn64 date: &apos;28-JAN-2022&apos; asDate;
+	cvic: cv9;
+	stud: s4;
+	vysledek: 3;
+	vyucujici: u3;
+	predmet: p3.
+
+zn65 := Znamka new.
+zn65 date: &apos;28-JAN-2022&apos; asDate;
+	cvic: cv9;
+	stud: s5;
+	vysledek: 3;
+	vyucujici: u3;
+	predmet: p3.
+
+zn66 := Znamka new.
+zn66 date: &apos;28-JAN-2022&apos; asDate;
+	cvic: cv9;
+	stud: s6;
+	vysledek: 3;
+	vyucujici: u3;
+	predmet: p3.
+
+zn67 := Znamka new.
+zn67 date: &apos;28-JAN-2022&apos; asDate;
+	cvic: cv9;
+	stud: s7;
+	vysledek: 2;
+	vyucujici: u3;
+	predmet: p3.
+
+zn68 := Znamka new.
+zn68 date: &apos;28-JAN-2022&apos; asDate;
+	cvic: cv9;
+	stud: s8;
+	vysledek: 4;
+	vyucujici: u3;
+	predmet: p3.
+
+zn69 := Znamka new.
+zn69 date: &apos;28-JAN-2022&apos; asDate;
+	cvic: cv9;
+	stud: s9;
+	vysledek: 2;
+	vyucujici: u3;
+	predmet: p3.
+
+zn70 := Znamka new.
+zn70 date: &apos;28-JAN-2022&apos; asDate;
+	cvic: cv9;
+	stud: s10;
+	vysledek: 2;
+	vyucujici: u3;
+	predmet: p3.
+
+zn71 := Znamka new.
+zn71 date: &apos;28-JAN-2022&apos; asDate;
+	cvic: cv9;
+	stud: s11;
+	vysledek: 3;
+	vyucujici: u3;
+	predmet: p3.
+
+zn72 := Znamka new.
+zn72 date: &apos;28-JAN-2022&apos; asDate;
+	cvic: cv9;
+	stud: s12;
+	vysledek: 3;
+	vyucujici: u3;
+	predmet: p3.
+
+&quot;Ulozeni znamek do Set Znamky &quot;
+
+Znamky add: zn1; add: zn2; add: zn3; add: zn4; add: zn5; add: zn6; add: zn7; add: zn8; add: zn9; add: zn10; add: zn11; add: zn12; add: zn13; add: zn14; add: zn15; add: zn16; add: zn17; add: zn18; add: zn19; add: zn20; add: zn21; add: zn22; add: zn23; add: zn24 ; add: zn25 ; add: zn26 ; add: zn27 ; add: zn28 ; add: zn29 ; add: zn30 ;add: zn31 ; add: zn32 ; add: zn33 ; add: zn34; add: zn35 ; add: zn36 ; add: zn37 ; add: zn38 ; add: zn39 ;  add: zn41 ; add: zn42 ; add: zn43 ; add: zn44 ; add: zn45 ; add: zn46 ; add: zn47 ; add: zn48 ; add: zn49 ; add: zn50 ; add: zn51 ; add: zn52 ; add: zn53 ; add: zn54 ; add: zn55 ; add: zn56 ; add: zn57 ; add: zn58 ; add: zn59 ; add: zn60 ; add: zn61 ; add: zn62 ; add: zn63 ; add: zn64 ; add: zn65 ; add: zn66 ; add: zn67 ; add: zn68 ; add: zn69 ; add: zn70 ; add: zn71 ; add: zn72.
+
+
+
+</sixx.object>
+		<sixx.object sixx.id="280" sixx.name="messagesWithParMode" sixx.type="Symbol" >sendOnly</sixx.object>
+		<sixx.object sixx.id="281" sixx.name="messagesWithoutParMode" sixx.type="Symbol" >sendAndBrowse</sixx.object>
+		<sixx.object sixx.id="282" sixx.name="diagramSymbols" sixx.type="Set" >
+			<sixx.object sixx.id="283" sixx.type="DaskalosCollectionSymbol" >
+				<sixx.object sixx.name="subject" sixx.idref="268" />
+				<sixx.object sixx.id="284" sixx.name="position" sixx.type="Rectangle" >40@240 corner: 140@323</sixx.object>
+				<sixx.object sixx.id="285" sixx.name="name" sixx.type="String" >Cvicka7</sixx.object>
+				<sixx.object sixx.id="286" sixx.name="borderPoints" sixx.type="List" >
+					<sixx.object sixx.id="287" sixx.type="Point" >40@256</sixx.object>
+					<sixx.object sixx.id="288" sixx.type="Point" >90@240</sixx.object>
+					<sixx.object sixx.id="289" sixx.type="Point" >140@256</sixx.object>
+					<sixx.object sixx.id="290" sixx.type="Point" >140@307</sixx.object>
+					<sixx.object sixx.id="291" sixx.type="Point" >90@323</sixx.object>
+					<sixx.object sixx.id="292" sixx.type="Point" >40@307</sixx.object>
+					<sixx.object sixx.idref="287" />
+				</sixx.object>
+				<sixx.object sixx.id="293" sixx.name="innerRectangle" sixx.type="Rectangle" >41@257 corner: 139@306</sixx.object>
+			</sixx.object>
+			<sixx.object sixx.id="294" sixx.type="DaskalosCollectionSymbol" >
+				<sixx.object sixx.name="subject" sixx.idref="262" />
+				<sixx.object sixx.id="295" sixx.name="position" sixx.type="Rectangle" >520@710 corner: 620@793</sixx.object>
+				<sixx.object sixx.id="296" sixx.name="name" sixx.type="String" >Predmety</sixx.object>
+				<sixx.object sixx.id="297" sixx.name="borderPoints" sixx.type="List" >
+					<sixx.object sixx.id="298" sixx.type="Point" >520@726</sixx.object>
+					<sixx.object sixx.id="299" sixx.type="Point" >570@710</sixx.object>
+					<sixx.object sixx.id="300" sixx.type="Point" >620@726</sixx.object>
+					<sixx.object sixx.id="301" sixx.type="Point" >620@777</sixx.object>
+					<sixx.object sixx.id="302" sixx.type="Point" >570@793</sixx.object>
+					<sixx.object sixx.id="303" sixx.type="Point" >520@777</sixx.object>
+					<sixx.object sixx.idref="298" />
+				</sixx.object>
+				<sixx.object sixx.id="304" sixx.name="innerRectangle" sixx.type="Rectangle" >521@727 corner: 619@776</sixx.object>
+			</sixx.object>
+			<sixx.object sixx.id="305" sixx.type="DaskalosCollectionSymbol" >
+				<sixx.object sixx.name="subject" sixx.idref="68" />
+				<sixx.object sixx.id="306" sixx.name="position" sixx.type="Rectangle" >530@60 corner: 630@143</sixx.object>
+				<sixx.object sixx.id="307" sixx.name="name" sixx.type="String" >Znamky</sixx.object>
+				<sixx.object sixx.id="308" sixx.name="borderPoints" sixx.type="List" >
+					<sixx.object sixx.id="309" sixx.type="Point" >530@76</sixx.object>
+					<sixx.object sixx.id="310" sixx.type="Point" >580@60</sixx.object>
+					<sixx.object sixx.id="311" sixx.type="Point" >630@76</sixx.object>
+					<sixx.object sixx.id="312" sixx.type="Point" >630@127</sixx.object>
+					<sixx.object sixx.id="313" sixx.type="Point" >580@143</sixx.object>
+					<sixx.object sixx.id="314" sixx.type="Point" >530@127</sixx.object>
+					<sixx.object sixx.idref="309" />
+				</sixx.object>
+				<sixx.object sixx.id="315" sixx.name="innerRectangle" sixx.type="Rectangle" >531@77 corner: 629@126</sixx.object>
+			</sixx.object>
+			<sixx.object sixx.id="316" sixx.type="DaskalosCollectionSymbol" >
+				<sixx.object sixx.name="subject" sixx.idref="62" />
+				<sixx.object sixx.id="317" sixx.name="position" sixx.type="Rectangle" >40@420 corner: 140@503</sixx.object>
+				<sixx.object sixx.id="318" sixx.name="name" sixx.type="String" >Cvicka5</sixx.object>
+				<sixx.object sixx.id="319" sixx.name="borderPoints" sixx.type="List" >
+					<sixx.object sixx.id="320" sixx.type="Point" >40@436</sixx.object>
+					<sixx.object sixx.id="321" sixx.type="Point" >90@420</sixx.object>
+					<sixx.object sixx.id="322" sixx.type="Point" >140@436</sixx.object>
+					<sixx.object sixx.id="323" sixx.type="Point" >140@487</sixx.object>
+					<sixx.object sixx.id="324" sixx.type="Point" >90@503</sixx.object>
+					<sixx.object sixx.id="325" sixx.type="Point" >40@487</sixx.object>
+					<sixx.object sixx.idref="320" />
+				</sixx.object>
+				<sixx.object sixx.id="326" sixx.name="innerRectangle" sixx.type="Rectangle" >41@437 corner: 139@486</sixx.object>
+			</sixx.object>
+			<sixx.object sixx.id="327" sixx.type="DaskalosCollectionSymbol" >
+				<sixx.object sixx.name="subject" sixx.idref="37" />
+				<sixx.object sixx.id="328" sixx.name="position" sixx.type="Rectangle" >240@750 corner: 340@833</sixx.object>
+				<sixx.object sixx.id="329" sixx.name="name" sixx.type="String" >Studenti</sixx.object>
+				<sixx.object sixx.id="330" sixx.name="borderPoints" sixx.type="List" >
+					<sixx.object sixx.id="331" sixx.type="Point" >240@766</sixx.object>
+					<sixx.object sixx.id="332" sixx.type="Point" >290@750</sixx.object>
+					<sixx.object sixx.id="333" sixx.type="Point" >340@766</sixx.object>
+					<sixx.object sixx.id="334" sixx.type="Point" >340@817</sixx.object>
+					<sixx.object sixx.id="335" sixx.type="Point" >290@833</sixx.object>
+					<sixx.object sixx.id="336" sixx.type="Point" >240@817</sixx.object>
+					<sixx.object sixx.idref="331" />
+				</sixx.object>
+				<sixx.object sixx.id="337" sixx.name="innerRectangle" sixx.type="Rectangle" >241@767 corner: 339@816</sixx.object>
+			</sixx.object>
+			<sixx.object sixx.id="338" sixx.type="DaskalosCollectionSymbol" >
+				<sixx.object sixx.name="subject" sixx.idref="265" />
+				<sixx.object sixx.id="339" sixx.name="position" sixx.type="Rectangle" >40@150 corner: 140@233</sixx.object>
+				<sixx.object sixx.id="340" sixx.name="name" sixx.type="String" >Cvicka8</sixx.object>
+				<sixx.object sixx.id="341" sixx.name="borderPoints" sixx.type="List" >
+					<sixx.object sixx.id="342" sixx.type="Point" >40@166</sixx.object>
+					<sixx.object sixx.id="343" sixx.type="Point" >90@150</sixx.object>
+					<sixx.object sixx.id="344" sixx.type="Point" >140@166</sixx.object>
+					<sixx.object sixx.id="345" sixx.type="Point" >140@217</sixx.object>
+					<sixx.object sixx.id="346" sixx.type="Point" >90@233</sixx.object>
+					<sixx.object sixx.id="347" sixx.type="Point" >40@217</sixx.object>
+					<sixx.object sixx.idref="342" />
+				</sixx.object>
+				<sixx.object sixx.id="348" sixx.name="innerRectangle" sixx.type="Rectangle" >41@167 corner: 139@216</sixx.object>
+			</sixx.object>
+			<sixx.object sixx.id="349" sixx.type="DaskalosCollectionSymbol" >
+				<sixx.object sixx.name="subject" sixx.idref="277" />
+				<sixx.object sixx.id="350" sixx.name="position" sixx.type="Rectangle" >1430@120 corner: 1530@203</sixx.object>
+				<sixx.object sixx.id="351" sixx.name="name" sixx.type="String" >Cvicky</sixx.object>
+				<sixx.object sixx.id="352" sixx.name="borderPoints" sixx.type="List" >
+					<sixx.object sixx.id="353" sixx.type="Point" >1430@136</sixx.object>
+					<sixx.object sixx.id="354" sixx.type="Point" >1480@120</sixx.object>
+					<sixx.object sixx.id="355" sixx.type="Point" >1530@136</sixx.object>
+					<sixx.object sixx.id="356" sixx.type="Point" >1530@187</sixx.object>
+					<sixx.object sixx.id="357" sixx.type="Point" >1480@203</sixx.object>
+					<sixx.object sixx.id="358" sixx.type="Point" >1430@187</sixx.object>
+					<sixx.object sixx.idref="353" />
+				</sixx.object>
+				<sixx.object sixx.id="359" sixx.name="innerRectangle" sixx.type="Rectangle" >1431@137 corner: 1529@186</sixx.object>
+			</sixx.object>
+			<sixx.object sixx.id="360" sixx.type="DaskalosClassSymbol" >
+				<sixx.object sixx.id="361" sixx.name="subject" sixx.type="Symbol" >Znamka</sixx.object>
+				<sixx.object sixx.id="362" sixx.name="position" sixx.type="Rectangle" >710@30 corner: 900@180</sixx.object>
+				<sixx.object sixx.id="363" sixx.name="methodsText" sixx.type="ComposedText" >
+					<sixx.object sixx.id="364" sixx.name="text" sixx.type="Text" >
+						<sixx.object sixx.id="365" sixx.name="string" sixx.type="String" >uspesnost
+</sixx.object>
+						<sixx.object sixx.id="366" sixx.name="runs" sixx.type="RunArray" >
+							<sixx.object sixx.id="367" sixx.name="runs" sixx.type="Array" >
+								<sixx.object sixx.id="368" sixx.type="SmallInteger" >10</sixx.object>
+							</sixx.object>
+							<sixx.object sixx.id="369" sixx.name="values" sixx.type="Array" >
+								<sixx.object sixx.type="UndefinedObject" />
+							</sixx.object>
+						</sixx.object>
+					</sixx.object>
+					<sixx.object sixx.id="370" sixx.name="compositionWidth" sixx.type="SmallInteger" >53</sixx.object>
+					<sixx.object sixx.id="371" sixx.name="compositionHeight" sixx.type="SmallInteger" >30</sixx.object>
+					<sixx.object sixx.name="wordWrap" sixx.type="True" />
+					<sixx.object sixx.id="372" sixx.name="lineTable" sixx.type="OptimizedLineInformationTable" >
+						<sixx.object sixx.id="373" sixx.name="lines" sixx.type="Array" >
+							<sixx.object sixx.idref="125" />
+							<sixx.object sixx.id="374" sixx.type="SmallInteger" >11</sixx.object>
+							<sixx.object sixx.type="UndefinedObject" />
+						</sixx.object>
+						<sixx.object sixx.name="lastLine" sixx.idref="125" />
+					</sixx.object>
+					<sixx.object sixx.name="fitWidth" sixx.type="True" />
+				</sixx.object>
+				<sixx.object sixx.id="375" sixx.name="instVarsText" sixx.type="ComposedText" >
+					<sixx.object sixx.id="376" sixx.name="text" sixx.type="Text" >
+						<sixx.object sixx.id="377" sixx.name="string" sixx.type="String" >date
+vysledek </sixx.object>
+						<sixx.object sixx.id="378" sixx.name="runs" sixx.type="RunArray" >
+							<sixx.object sixx.id="379" sixx.name="runs" sixx.type="Array" >
+								<sixx.object sixx.id="380" sixx.type="SmallInteger" >14</sixx.object>
+							</sixx.object>
+							<sixx.object sixx.id="381" sixx.name="values" sixx.type="Array" >
+								<sixx.object sixx.type="UndefinedObject" />
+							</sixx.object>
+						</sixx.object>
+					</sixx.object>
+					<sixx.object sixx.id="382" sixx.name="compositionWidth" sixx.type="SmallInteger" >48</sixx.object>
+					<sixx.object sixx.name="compositionHeight" sixx.idref="371" />
+					<sixx.object sixx.name="wordWrap" sixx.type="True" />
+					<sixx.object sixx.id="383" sixx.name="lineTable" sixx.type="OptimizedLineInformationTable" >
+						<sixx.object sixx.id="384" sixx.name="lines" sixx.type="Array" >
+							<sixx.object sixx.idref="125" />
+							<sixx.object sixx.id="385" sixx.type="SmallInteger" >6</sixx.object>
+							<sixx.object sixx.id="386" sixx.type="SmallInteger" >15</sixx.object>
+							<sixx.object sixx.type="UndefinedObject" />
+							<sixx.object sixx.type="UndefinedObject" />
+						</sixx.object>
+						<sixx.object sixx.name="lastLine" sixx.idref="85" />
+					</sixx.object>
+					<sixx.object sixx.name="fitWidth" sixx.type="True" />
+				</sixx.object>
+				<sixx.object sixx.id="387" sixx.name="compositionConnections" sixx.type="Set" >
+					<sixx.object sixx.id="388" sixx.type="DaskalosCompositionConnection" >
+						<sixx.object sixx.name="fromSymbol" sixx.idref="360" />
+						<sixx.object sixx.id="389" sixx.name="toSymbol" sixx.type="DaskalosClassSymbol" >
+							<sixx.object sixx.id="390" sixx.name="subject" sixx.type="Symbol" >Student</sixx.object>
+							<sixx.object sixx.id="391" sixx.name="position" sixx.type="Rectangle" >240@470 corner: 340@640</sixx.object>
+							<sixx.object sixx.id="392" sixx.name="methodsText" sixx.type="ComposedText" >
+								<sixx.object sixx.id="393" sixx.name="text" sixx.type="Text" >
+									<sixx.object sixx.id="394" sixx.name="string" sixx.type="String" >dospely
+vek
+</sixx.object>
+									<sixx.object sixx.id="395" sixx.name="runs" sixx.type="RunArray" >
+										<sixx.object sixx.id="396" sixx.name="runs" sixx.type="Array" >
+											<sixx.object sixx.id="397" sixx.type="SmallInteger" >12</sixx.object>
+										</sixx.object>
+										<sixx.object sixx.id="398" sixx.name="values" sixx.type="Array" >
+											<sixx.object sixx.type="UndefinedObject" />
+										</sixx.object>
+									</sixx.object>
+								</sixx.object>
+								<sixx.object sixx.id="399" sixx.name="compositionWidth" sixx.type="SmallInteger" >41</sixx.object>
+								<sixx.object sixx.id="400" sixx.name="compositionHeight" sixx.type="SmallInteger" >45</sixx.object>
+								<sixx.object sixx.name="wordWrap" sixx.type="True" />
+								<sixx.object sixx.id="401" sixx.name="lineTable" sixx.type="OptimizedLineInformationTable" >
+									<sixx.object sixx.id="402" sixx.name="lines" sixx.type="Array" >
+										<sixx.object sixx.idref="125" />
+										<sixx.object sixx.id="403" sixx.type="SmallInteger" >9</sixx.object>
+										<sixx.object sixx.id="404" sixx.type="SmallInteger" >13</sixx.object>
+										<sixx.object sixx.type="UndefinedObject" />
+										<sixx.object sixx.type="UndefinedObject" />
+									</sixx.object>
+									<sixx.object sixx.name="lastLine" sixx.idref="85" />
+								</sixx.object>
+								<sixx.object sixx.name="fitWidth" sixx.type="True" />
+							</sixx.object>
+							<sixx.object sixx.id="405" sixx.name="instVarsText" sixx.type="ComposedText" >
+								<sixx.object sixx.id="406" sixx.name="text" sixx.type="Text" >
+									<sixx.object sixx.id="407" sixx.name="string" sixx.type="String" >jmeno
+rokNarozeni
+kod </sixx.object>
+									<sixx.object sixx.id="408" sixx.name="runs" sixx.type="RunArray" >
+										<sixx.object sixx.id="409" sixx.name="runs" sixx.type="Array" >
+											<sixx.object sixx.id="410" sixx.type="SmallInteger" >22</sixx.object>
+										</sixx.object>
+										<sixx.object sixx.id="411" sixx.name="values" sixx.type="Array" >
+											<sixx.object sixx.type="UndefinedObject" />
+										</sixx.object>
+									</sixx.object>
+								</sixx.object>
+								<sixx.object sixx.id="412" sixx.name="compositionWidth" sixx.type="SmallInteger" >64</sixx.object>
+								<sixx.object sixx.name="compositionHeight" sixx.idref="400" />
+								<sixx.object sixx.name="wordWrap" sixx.type="True" />
+								<sixx.object sixx.id="413" sixx.name="lineTable" sixx.type="OptimizedLineInformationTable" >
+									<sixx.object sixx.id="414" sixx.name="lines" sixx.type="Array" >
+										<sixx.object sixx.idref="125" />
+										<sixx.object sixx.id="415" sixx.type="SmallInteger" >7</sixx.object>
+										<sixx.object sixx.id="416" sixx.type="SmallInteger" >19</sixx.object>
+										<sixx.object sixx.id="417" sixx.type="SmallInteger" >23</sixx.object>
+										<sixx.object sixx.type="UndefinedObject" />
+										<sixx.object sixx.type="UndefinedObject" />
+									</sixx.object>
+									<sixx.object sixx.name="lastLine" sixx.idref="90" />
+								</sixx.object>
+								<sixx.object sixx.name="fitWidth" sixx.type="True" />
+							</sixx.object>
+							<sixx.object sixx.id="418" sixx.name="compositionConnections" sixx.type="Set" ></sixx.object>
+						</sixx.object>
+						<sixx.object sixx.id="419" sixx.name="name" sixx.type="String" >stud</sixx.object>
+						<sixx.object sixx.id="420" sixx.name="cardinality" sixx.type="String" ></sixx.object>
+						<sixx.object sixx.id="421" sixx.name="stereotype" sixx.type="String" ></sixx.object>
+						<sixx.object sixx.id="422" sixx.name="controlPoints" sixx.type="List" >
+							<sixx.object sixx.type="UndefinedObject" />
+						</sixx.object>
+					</sixx.object>
+					<sixx.object sixx.id="423" sixx.type="DaskalosCompositionConnection" >
+						<sixx.object sixx.name="fromSymbol" sixx.idref="360" />
+						<sixx.object sixx.id="424" sixx.name="toSymbol" sixx.type="DaskalosClassSymbol" >
+							<sixx.object sixx.id="425" sixx.name="subject" sixx.type="Symbol" >Ucitel</sixx.object>
+							<sixx.object sixx.id="426" sixx.name="position" sixx.type="Rectangle" >1140@680 corner: 1260@810</sixx.object>
+							<sixx.object sixx.id="427" sixx.name="methodsText" sixx.type="ComposedText" >
+								<sixx.object sixx.id="428" sixx.name="text" sixx.type="Text" >
+									<sixx.object sixx.id="429" sixx.name="string" sixx.type="String" ></sixx.object>
+									<sixx.object sixx.id="430" sixx.name="runs" sixx.type="RunArray" >
+										<sixx.object sixx.id="431" sixx.name="runs" sixx.type="Array" ></sixx.object>
+										<sixx.object sixx.id="432" sixx.name="values" sixx.type="Array" ></sixx.object>
+									</sixx.object>
+								</sixx.object>
+								<sixx.object sixx.id="433" sixx.name="compositionWidth" sixx.type="SmallInteger" >0</sixx.object>
+								<sixx.object sixx.name="compositionHeight" sixx.idref="433" />
+								<sixx.object sixx.name="wordWrap" sixx.type="True" />
+								<sixx.object sixx.id="434" sixx.name="lineTable" sixx.type="OptimizedLineInformationTable" >
+									<sixx.object sixx.id="435" sixx.name="lines" sixx.type="Array" >
+										<sixx.object sixx.idref="125" />
+										<sixx.object sixx.type="UndefinedObject" />
+										<sixx.object sixx.type="UndefinedObject" />
+										<sixx.object sixx.type="UndefinedObject" />
+										<sixx.object sixx.type="UndefinedObject" />
+									</sixx.object>
+									<sixx.object sixx.name="lastLine" sixx.idref="433" />
+								</sixx.object>
+								<sixx.object sixx.name="fitWidth" sixx.type="True" />
+							</sixx.object>
+							<sixx.object sixx.id="436" sixx.name="instVarsText" sixx.type="ComposedText" >
+								<sixx.object sixx.id="437" sixx.name="text" sixx.type="Text" >
+									<sixx.object sixx.id="438" sixx.name="string" sixx.type="String" >jmeno
+mistnost
+odbornost </sixx.object>
+									<sixx.object sixx.id="439" sixx.name="runs" sixx.type="RunArray" >
+										<sixx.object sixx.id="440" sixx.name="runs" sixx.type="Array" >
+											<sixx.object sixx.id="441" sixx.type="SmallInteger" >25</sixx.object>
+										</sixx.object>
+										<sixx.object sixx.id="442" sixx.name="values" sixx.type="Array" >
+											<sixx.object sixx.type="UndefinedObject" />
+										</sixx.object>
+									</sixx.object>
+								</sixx.object>
+								<sixx.object sixx.id="443" sixx.name="compositionWidth" sixx.type="SmallInteger" >58</sixx.object>
+								<sixx.object sixx.name="compositionHeight" sixx.idref="400" />
+								<sixx.object sixx.name="wordWrap" sixx.type="True" />
+								<sixx.object sixx.id="444" sixx.name="lineTable" sixx.type="OptimizedLineInformationTable" >
+									<sixx.object sixx.id="445" sixx.name="lines" sixx.type="Array" >
+										<sixx.object sixx.idref="125" />
+										<sixx.object sixx.idref="415" />
+										<sixx.object sixx.id="446" sixx.type="SmallInteger" >16</sixx.object>
+										<sixx.object sixx.id="447" sixx.type="SmallInteger" >26</sixx.object>
+										<sixx.object sixx.type="UndefinedObject" />
+										<sixx.object sixx.type="UndefinedObject" />
+									</sixx.object>
+									<sixx.object sixx.name="lastLine" sixx.idref="90" />
+								</sixx.object>
+								<sixx.object sixx.name="fitWidth" sixx.type="True" />
+							</sixx.object>
+							<sixx.object sixx.id="448" sixx.name="compositionConnections" sixx.type="Set" ></sixx.object>
+						</sixx.object>
+						<sixx.object sixx.id="449" sixx.name="name" sixx.type="String" >vyucujici</sixx.object>
+						<sixx.object sixx.name="cardinality" sixx.idref="420" />
+						<sixx.object sixx.name="stereotype" sixx.idref="421" />
+						<sixx.object sixx.id="450" sixx.name="controlPoints" sixx.type="List" >
+							<sixx.object sixx.type="UndefinedObject" />
+						</sixx.object>
+					</sixx.object>
+					<sixx.object sixx.id="451" sixx.type="DaskalosCompositionConnection" >
+						<sixx.object sixx.name="fromSymbol" sixx.idref="360" />
+						<sixx.object sixx.id="452" sixx.name="toSymbol" sixx.type="DaskalosClassSymbol" >
+							<sixx.object sixx.id="453" sixx.name="subject" sixx.type="Symbol" >Cvicka</sixx.object>
+							<sixx.object sixx.id="454" sixx.name="position" sixx.type="Rectangle" >1420@260 corner: 1540@410</sixx.object>
+							<sixx.object sixx.id="455" sixx.name="methodsText" sixx.type="ComposedText" >
+								<sixx.object sixx.id="456" sixx.name="text" sixx.type="Text" >
+									<sixx.object sixx.name="string" sixx.idref="429" />
+									<sixx.object sixx.id="457" sixx.name="runs" sixx.type="RunArray" >
+										<sixx.object sixx.id="458" sixx.name="runs" sixx.type="Array" ></sixx.object>
+										<sixx.object sixx.id="459" sixx.name="values" sixx.type="Array" ></sixx.object>
+									</sixx.object>
+								</sixx.object>
+								<sixx.object sixx.name="compositionWidth" sixx.idref="433" />
+								<sixx.object sixx.name="compositionHeight" sixx.idref="433" />
+								<sixx.object sixx.name="wordWrap" sixx.type="True" />
+								<sixx.object sixx.id="460" sixx.name="lineTable" sixx.type="OptimizedLineInformationTable" >
+									<sixx.object sixx.id="461" sixx.name="lines" sixx.type="Array" >
+										<sixx.object sixx.idref="125" />
+										<sixx.object sixx.type="UndefinedObject" />
+										<sixx.object sixx.type="UndefinedObject" />
+										<sixx.object sixx.type="UndefinedObject" />
+										<sixx.object sixx.type="UndefinedObject" />
+									</sixx.object>
+									<sixx.object sixx.name="lastLine" sixx.idref="433" />
+								</sixx.object>
+								<sixx.object sixx.name="fitWidth" sixx.type="True" />
+							</sixx.object>
+							<sixx.object sixx.id="462" sixx.name="instVarsText" sixx.type="ComposedText" >
+								<sixx.object sixx.id="463" sixx.name="text" sixx.type="Text" >
+									<sixx.object sixx.id="464" sixx.name="string" sixx.type="String" >datum </sixx.object>
+									<sixx.object sixx.id="465" sixx.name="runs" sixx.type="RunArray" >
+										<sixx.object sixx.id="466" sixx.name="runs" sixx.type="Array" >
+											<sixx.object sixx.idref="385" />
+										</sixx.object>
+										<sixx.object sixx.id="467" sixx.name="values" sixx.type="Array" >
+											<sixx.object sixx.type="UndefinedObject" />
+										</sixx.object>
+									</sixx.object>
+								</sixx.object>
+								<sixx.object sixx.id="468" sixx.name="compositionWidth" sixx.type="SmallInteger" >38</sixx.object>
+								<sixx.object sixx.name="compositionHeight" sixx.idref="386" />
+								<sixx.object sixx.name="wordWrap" sixx.type="True" />
+								<sixx.object sixx.id="469" sixx.name="lineTable" sixx.type="OptimizedLineInformationTable" >
+									<sixx.object sixx.id="470" sixx.name="lines" sixx.type="Array" >
+										<sixx.object sixx.idref="125" />
+										<sixx.object sixx.idref="415" />
+										<sixx.object sixx.type="UndefinedObject" />
+									</sixx.object>
+									<sixx.object sixx.name="lastLine" sixx.idref="125" />
+								</sixx.object>
+								<sixx.object sixx.name="fitWidth" sixx.type="True" />
+							</sixx.object>
+							<sixx.object sixx.id="471" sixx.name="compositionConnections" sixx.type="Set" >
+								<sixx.object sixx.id="472" sixx.type="DaskalosCompositionConnection" >
+									<sixx.object sixx.name="fromSymbol" sixx.idref="452" />
+									<sixx.object sixx.name="toSymbol" sixx.idref="424" />
+									<sixx.object sixx.id="473" sixx.name="name" sixx.type="String" >ucitel</sixx.object>
+									<sixx.object sixx.name="cardinality" sixx.idref="420" />
+									<sixx.object sixx.name="stereotype" sixx.idref="421" />
+									<sixx.object sixx.id="474" sixx.name="controlPoints" sixx.type="List" >
+										<sixx.object sixx.type="UndefinedObject" />
+									</sixx.object>
+								</sixx.object>
+								<sixx.object sixx.id="475" sixx.type="DaskalosCompositionConnection" >
+									<sixx.object sixx.name="fromSymbol" sixx.idref="452" />
+									<sixx.object sixx.id="476" sixx.name="toSymbol" sixx.type="DaskalosClassSymbol" >
+										<sixx.object sixx.id="477" sixx.name="subject" sixx.type="Symbol" >Predmet</sixx.object>
+										<sixx.object sixx.id="478" sixx.name="position" sixx.type="Rectangle" >700@650 corner: 920@830</sixx.object>
+										<sixx.object sixx.id="479" sixx.name="methodsText" sixx.type="ComposedText" >
+											<sixx.object sixx.id="480" sixx.name="text" sixx.type="Text" >
+												<sixx.object sixx.name="string" sixx.idref="429" />
+												<sixx.object sixx.id="481" sixx.name="runs" sixx.type="RunArray" >
+													<sixx.object sixx.id="482" sixx.name="runs" sixx.type="Array" ></sixx.object>
+													<sixx.object sixx.id="483" sixx.name="values" sixx.type="Array" ></sixx.object>
+												</sixx.object>
+											</sixx.object>
+											<sixx.object sixx.name="compositionWidth" sixx.idref="433" />
+											<sixx.object sixx.name="compositionHeight" sixx.idref="433" />
+											<sixx.object sixx.name="wordWrap" sixx.type="True" />
+											<sixx.object sixx.id="484" sixx.name="lineTable" sixx.type="OptimizedLineInformationTable" >
+												<sixx.object sixx.id="485" sixx.name="lines" sixx.type="Array" >
+													<sixx.object sixx.idref="125" />
+													<sixx.object sixx.type="UndefinedObject" />
+													<sixx.object sixx.type="UndefinedObject" />
+													<sixx.object sixx.type="UndefinedObject" />
+													<sixx.object sixx.type="UndefinedObject" />
+												</sixx.object>
+												<sixx.object sixx.name="lastLine" sixx.idref="433" />
+											</sixx.object>
+											<sixx.object sixx.name="fitWidth" sixx.type="True" />
+										</sixx.object>
+										<sixx.object sixx.id="486" sixx.name="instVarsText" sixx.type="ComposedText" >
+											<sixx.object sixx.id="487" sixx.name="text" sixx.type="Text" >
+												<sixx.object sixx.id="488" sixx.name="string" sixx.type="String" >nazev
+kod </sixx.object>
+												<sixx.object sixx.id="489" sixx.name="runs" sixx.type="RunArray" >
+													<sixx.object sixx.id="490" sixx.name="runs" sixx.type="Array" >
+														<sixx.object sixx.idref="368" />
+													</sixx.object>
+													<sixx.object sixx.id="491" sixx.name="values" sixx.type="Array" >
+														<sixx.object sixx.type="UndefinedObject" />
+													</sixx.object>
+												</sixx.object>
+											</sixx.object>
+											<sixx.object sixx.name="compositionWidth" sixx.idref="371" />
+											<sixx.object sixx.name="compositionHeight" sixx.idref="371" />
+											<sixx.object sixx.name="wordWrap" sixx.type="True" />
+											<sixx.object sixx.id="492" sixx.name="lineTable" sixx.type="OptimizedLineInformationTable" >
+												<sixx.object sixx.id="493" sixx.name="lines" sixx.type="Array" >
+													<sixx.object sixx.idref="125" />
+													<sixx.object sixx.idref="415" />
+													<sixx.object sixx.idref="374" />
+													<sixx.object sixx.type="UndefinedObject" />
+													<sixx.object sixx.type="UndefinedObject" />
+												</sixx.object>
+												<sixx.object sixx.name="lastLine" sixx.idref="85" />
+											</sixx.object>
+											<sixx.object sixx.name="fitWidth" sixx.type="True" />
+										</sixx.object>
+										<sixx.object sixx.id="494" sixx.name="compositionConnections" sixx.type="Set" >
+											<sixx.object sixx.id="495" sixx.type="DaskalosCompositionConnection" >
+												<sixx.object sixx.name="fromSymbol" sixx.idref="476" />
+												<sixx.object sixx.name="toSymbol" sixx.idref="424" />
+												<sixx.object sixx.id="496" sixx.name="name" sixx.type="String" >ucit</sixx.object>
+												<sixx.object sixx.name="cardinality" sixx.idref="420" />
+												<sixx.object sixx.name="stereotype" sixx.idref="421" />
+												<sixx.object sixx.id="497" sixx.name="controlPoints" sixx.type="List" >
+													<sixx.object sixx.type="UndefinedObject" />
+												</sixx.object>
+											</sixx.object>
+										</sixx.object>
+									</sixx.object>
+									<sixx.object sixx.id="498" sixx.name="name" sixx.type="String" >predmet</sixx.object>
+									<sixx.object sixx.name="cardinality" sixx.idref="420" />
+									<sixx.object sixx.name="stereotype" sixx.idref="421" />
+									<sixx.object sixx.id="499" sixx.name="controlPoints" sixx.type="List" >
+										<sixx.object sixx.type="UndefinedObject" />
+									</sixx.object>
+								</sixx.object>
+							</sixx.object>
+						</sixx.object>
+						<sixx.object sixx.id="500" sixx.name="name" sixx.type="String" >cvic</sixx.object>
+						<sixx.object sixx.name="cardinality" sixx.idref="420" />
+						<sixx.object sixx.name="stereotype" sixx.idref="421" />
+						<sixx.object sixx.id="501" sixx.name="controlPoints" sixx.type="List" >
+							<sixx.object sixx.type="UndefinedObject" />
+						</sixx.object>
+					</sixx.object>
+					<sixx.object sixx.id="502" sixx.type="DaskalosCompositionConnection" >
+						<sixx.object sixx.name="fromSymbol" sixx.idref="360" />
+						<sixx.object sixx.name="toSymbol" sixx.idref="476" />
+						<sixx.object sixx.id="503" sixx.name="name" sixx.type="String" >predmet</sixx.object>
+						<sixx.object sixx.name="cardinality" sixx.idref="420" />
+						<sixx.object sixx.name="stereotype" sixx.idref="421" />
+						<sixx.object sixx.id="504" sixx.name="controlPoints" sixx.type="List" >
+							<sixx.object sixx.type="UndefinedObject" />
+						</sixx.object>
+					</sixx.object>
+				</sixx.object>
+			</sixx.object>
+			<sixx.object sixx.id="505" sixx.type="DaskalosCollectionSymbol" >
+				<sixx.object sixx.name="subject" sixx.idref="274" />
+				<sixx.object sixx.id="506" sixx.name="position" sixx.type="Rectangle" >40@600 corner: 140@683</sixx.object>
+				<sixx.object sixx.id="507" sixx.name="name" sixx.type="String" >Cvicka3</sixx.object>
+				<sixx.object sixx.id="508" sixx.name="borderPoints" sixx.type="List" >
+					<sixx.object sixx.id="509" sixx.type="Point" >40@616</sixx.object>
+					<sixx.object sixx.id="510" sixx.type="Point" >90@600</sixx.object>
+					<sixx.object sixx.id="511" sixx.type="Point" >140@616</sixx.object>
+					<sixx.object sixx.id="512" sixx.type="Point" >140@667</sixx.object>
+					<sixx.object sixx.id="513" sixx.type="Point" >90@683</sixx.object>
+					<sixx.object sixx.id="514" sixx.type="Point" >40@667</sixx.object>
+					<sixx.object sixx.idref="509" />
+				</sixx.object>
+				<sixx.object sixx.id="515" sixx.name="innerRectangle" sixx.type="Rectangle" >41@617 corner: 139@666</sixx.object>
+			</sixx.object>
+			<sixx.object sixx.idref="452" />
+			<sixx.object sixx.idref="389" />
+			<sixx.object sixx.id="516" sixx.type="DaskalosCollectionSymbol" >
+				<sixx.object sixx.name="subject" sixx.idref="65" />
+				<sixx.object sixx.id="517" sixx.name="position" sixx.type="Rectangle" >40@60 corner: 140@143</sixx.object>
+				<sixx.object sixx.id="518" sixx.name="name" sixx.type="String" >Cvicka9</sixx.object>
+				<sixx.object sixx.id="519" sixx.name="borderPoints" sixx.type="List" >
+					<sixx.object sixx.id="520" sixx.type="Point" >40@76</sixx.object>
+					<sixx.object sixx.id="521" sixx.type="Point" >90@60</sixx.object>
+					<sixx.object sixx.id="522" sixx.type="Point" >140@76</sixx.object>
+					<sixx.object sixx.id="523" sixx.type="Point" >140@127</sixx.object>
+					<sixx.object sixx.id="524" sixx.type="Point" >90@143</sixx.object>
+					<sixx.object sixx.id="525" sixx.type="Point" >40@127</sixx.object>
+					<sixx.object sixx.idref="520" />
+				</sixx.object>
+				<sixx.object sixx.id="526" sixx.name="innerRectangle" sixx.type="Rectangle" >41@77 corner: 139@126</sixx.object>
+			</sixx.object>
+			<sixx.object sixx.id="527" sixx.type="DaskalosCollectionSymbol" >
+				<sixx.object sixx.name="subject" sixx.idref="7" />
+				<sixx.object sixx.id="528" sixx.name="position" sixx.type="Rectangle" >40@510 corner: 140@593</sixx.object>
+				<sixx.object sixx.id="529" sixx.name="name" sixx.type="String" >Cvicka4</sixx.object>
+				<sixx.object sixx.id="530" sixx.name="borderPoints" sixx.type="List" >
+					<sixx.object sixx.id="531" sixx.type="Point" >40@526</sixx.object>
+					<sixx.object sixx.id="532" sixx.type="Point" >90@510</sixx.object>
+					<sixx.object sixx.id="533" sixx.type="Point" >140@526</sixx.object>
+					<sixx.object sixx.id="534" sixx.type="Point" >140@577</sixx.object>
+					<sixx.object sixx.id="535" sixx.type="Point" >90@593</sixx.object>
+					<sixx.object sixx.id="536" sixx.type="Point" >40@577</sixx.object>
+					<sixx.object sixx.idref="531" />
+				</sixx.object>
+				<sixx.object sixx.id="537" sixx.name="innerRectangle" sixx.type="Rectangle" >41@527 corner: 139@576</sixx.object>
+			</sixx.object>
+			<sixx.object sixx.id="538" sixx.type="DaskalosCollectionSymbol" >
+				<sixx.object sixx.name="subject" sixx.idref="256" />
+				<sixx.object sixx.id="539" sixx.name="position" sixx.type="Rectangle" >1150@830 corner: 1250@913</sixx.object>
+				<sixx.object sixx.id="540" sixx.name="name" sixx.type="String" >Ucitele</sixx.object>
+				<sixx.object sixx.id="541" sixx.name="borderPoints" sixx.type="List" >
+					<sixx.object sixx.id="542" sixx.type="Point" >1150@846</sixx.object>
+					<sixx.object sixx.id="543" sixx.type="Point" >1200@830</sixx.object>
+					<sixx.object sixx.id="544" sixx.type="Point" >1250@846</sixx.object>
+					<sixx.object sixx.id="545" sixx.type="Point" >1250@897</sixx.object>
+					<sixx.object sixx.id="546" sixx.type="Point" >1200@913</sixx.object>
+					<sixx.object sixx.id="547" sixx.type="Point" >1150@897</sixx.object>
+					<sixx.object sixx.idref="542" />
+				</sixx.object>
+				<sixx.object sixx.id="548" sixx.name="innerRectangle" sixx.type="Rectangle" >1151@847 corner: 1249@896</sixx.object>
+			</sixx.object>
+			<sixx.object sixx.idref="476" />
+			<sixx.object sixx.id="549" sixx.type="DaskalosCollectionSymbol" >
+				<sixx.object sixx.name="subject" sixx.idref="271" />
+				<sixx.object sixx.id="550" sixx.name="position" sixx.type="Rectangle" >40@330 corner: 140@413</sixx.object>
+				<sixx.object sixx.id="551" sixx.name="name" sixx.type="String" >Cvicka6</sixx.object>
+				<sixx.object sixx.id="552" sixx.name="borderPoints" sixx.type="List" >
+					<sixx.object sixx.id="553" sixx.type="Point" >40@346</sixx.object>
+					<sixx.object sixx.id="554" sixx.type="Point" >90@330</sixx.object>
+					<sixx.object sixx.id="555" sixx.type="Point" >140@346</sixx.object>
+					<sixx.object sixx.id="556" sixx.type="Point" >140@397</sixx.object>
+					<sixx.object sixx.id="557" sixx.type="Point" >90@413</sixx.object>
+					<sixx.object sixx.id="558" sixx.type="Point" >40@397</sixx.object>
+					<sixx.object sixx.idref="553" />
+				</sixx.object>
+				<sixx.object sixx.id="559" sixx.name="innerRectangle" sixx.type="Rectangle" >41@347 corner: 139@396</sixx.object>
+			</sixx.object>
+			<sixx.object sixx.idref="424" />
+			<sixx.object sixx.id="560" sixx.type="DaskalosCollectionSymbol" >
+				<sixx.object sixx.name="subject" sixx.idref="59" />
+				<sixx.object sixx.id="561" sixx.name="position" sixx.type="Rectangle" >40@690 corner: 140@773</sixx.object>
+				<sixx.object sixx.id="562" sixx.name="name" sixx.type="String" >Cvicka2</sixx.object>
+				<sixx.object sixx.id="563" sixx.name="borderPoints" sixx.type="List" >
+					<sixx.object sixx.id="564" sixx.type="Point" >40@706</sixx.object>
+					<sixx.object sixx.id="565" sixx.type="Point" >90@690</sixx.object>
+					<sixx.object sixx.id="566" sixx.type="Point" >140@706</sixx.object>
+					<sixx.object sixx.id="567" sixx.type="Point" >140@757</sixx.object>
+					<sixx.object sixx.id="568" sixx.type="Point" >90@773</sixx.object>
+					<sixx.object sixx.id="569" sixx.type="Point" >40@757</sixx.object>
+					<sixx.object sixx.idref="564" />
+				</sixx.object>
+				<sixx.object sixx.id="570" sixx.name="innerRectangle" sixx.type="Rectangle" >41@707 corner: 139@756</sixx.object>
+			</sixx.object>
+			<sixx.object sixx.id="571" sixx.type="DaskalosCollectionSymbol" >
+				<sixx.object sixx.name="subject" sixx.idref="259" />
+				<sixx.object sixx.id="572" sixx.name="position" sixx.type="Rectangle" >40@780 corner: 140@863</sixx.object>
+				<sixx.object sixx.id="573" sixx.name="name" sixx.type="String" >Cvicka1</sixx.object>
+				<sixx.object sixx.id="574" sixx.name="borderPoints" sixx.type="List" >
+					<sixx.object sixx.id="575" sixx.type="Point" >40@796</sixx.object>
+					<sixx.object sixx.id="576" sixx.type="Point" >90@780</sixx.object>
+					<sixx.object sixx.id="577" sixx.type="Point" >140@796</sixx.object>
+					<sixx.object sixx.id="578" sixx.type="Point" >140@847</sixx.object>
+					<sixx.object sixx.id="579" sixx.type="Point" >90@863</sixx.object>
+					<sixx.object sixx.id="580" sixx.type="Point" >40@847</sixx.object>
+					<sixx.object sixx.idref="575" />
+				</sixx.object>
+				<sixx.object sixx.id="581" sixx.name="innerRectangle" sixx.type="Rectangle" >41@797 corner: 139@846</sixx.object>
+			</sixx.object>
+		</sixx.object>
+		<sixx.object sixx.id="582" sixx.name="diagramConnections" sixx.type="Set" >
+			<sixx.object sixx.id="583" sixx.type="DaskalosCompositionConnection" >
+				<sixx.object sixx.name="fromSymbol" sixx.idref="360" />
+				<sixx.object sixx.name="toSymbol" sixx.idref="389" />
+				<sixx.object sixx.id="584" sixx.name="name" sixx.type="String" >stud</sixx.object>
+				<sixx.object sixx.name="cardinality" sixx.idref="420" />
+				<sixx.object sixx.name="stereotype" sixx.idref="421" />
+				<sixx.object sixx.id="585" sixx.name="fromPoint" sixx.type="Point" >710@160</sixx.object>
+				<sixx.object sixx.id="586" sixx.name="toPoint" sixx.type="Point" >330@470</sixx.object>
+				<sixx.object sixx.id="587" sixx.name="controlPoints" sixx.type="List" >
+					<sixx.object sixx.id="588" sixx.type="Point" >520@160</sixx.object>
+					<sixx.object sixx.id="589" sixx.type="Point" >330@160</sixx.object>
+					<sixx.object sixx.id="590" sixx.type="Point" >330@315</sixx.object>
+				</sixx.object>
+			</sixx.object>
+			<sixx.object sixx.id="591" sixx.type="DaskalosCompositionConnection" >
+				<sixx.object sixx.name="fromSymbol" sixx.idref="360" />
+				<sixx.object sixx.name="toSymbol" sixx.idref="476" />
+				<sixx.object sixx.id="592" sixx.name="name" sixx.type="String" >predmet</sixx.object>
+				<sixx.object sixx.name="cardinality" sixx.idref="420" />
+				<sixx.object sixx.name="stereotype" sixx.idref="421" />
+				<sixx.object sixx.id="593" sixx.name="fromPoint" sixx.type="Point" >(102310 / 127)@180</sixx.object>
+				<sixx.object sixx.id="594" sixx.name="toPoint" sixx.type="Point" >(102780 / 127)@650</sixx.object>
+				<sixx.object sixx.id="595" sixx.name="controlPoints" sixx.type="List" >
+					<sixx.object sixx.id="596" sixx.type="Point" >(102545 / 127)@415</sixx.object>
+				</sixx.object>
+			</sixx.object>
+			<sixx.object sixx.id="597" sixx.type="DaskalosElementConnection" >
+				<sixx.object sixx.name="fromSymbol" sixx.idref="389" />
+				<sixx.object sixx.name="toSymbol" sixx.idref="505" />
+			</sixx.object>
+			<sixx.object sixx.id="598" sixx.type="DaskalosElementConnection" >
+				<sixx.object sixx.name="fromSymbol" sixx.idref="389" />
+				<sixx.object sixx.name="toSymbol" sixx.idref="327" />
+			</sixx.object>
+			<sixx.object sixx.id="599" sixx.type="DaskalosCompositionConnection" >
+				<sixx.object sixx.name="fromSymbol" sixx.idref="476" />
+				<sixx.object sixx.name="toSymbol" sixx.idref="424" />
+				<sixx.object sixx.id="600" sixx.name="name" sixx.type="String" >ucit</sixx.object>
+				<sixx.object sixx.name="cardinality" sixx.idref="420" />
+				<sixx.object sixx.name="stereotype" sixx.idref="421" />
+				<sixx.object sixx.id="601" sixx.name="fromPoint" sixx.type="Point" >920@(28915 / 39)</sixx.object>
+				<sixx.object sixx.id="602" sixx.name="toPoint" sixx.type="Point" >1140@(9675 / 13)</sixx.object>
+				<sixx.object sixx.id="603" sixx.name="controlPoints" sixx.type="List" >
+					<sixx.object sixx.id="604" sixx.type="Point" >1030@(28970 / 39)</sixx.object>
+				</sixx.object>
+			</sixx.object>
+			<sixx.object sixx.id="605" sixx.type="DaskalosCompositionConnection" >
+				<sixx.object sixx.name="fromSymbol" sixx.idref="452" />
+				<sixx.object sixx.name="toSymbol" sixx.idref="424" />
+				<sixx.object sixx.id="606" sixx.name="name" sixx.type="String" >ucitel</sixx.object>
+				<sixx.object sixx.name="cardinality" sixx.idref="420" />
+				<sixx.object sixx.name="stereotype" sixx.idref="421" />
+				<sixx.object sixx.id="607" sixx.name="fromPoint" sixx.type="Point" >1490@410</sixx.object>
+				<sixx.object sixx.id="608" sixx.name="toPoint" sixx.type="Point" >1260@730</sixx.object>
+				<sixx.object sixx.id="609" sixx.name="controlPoints" sixx.type="List" >
+					<sixx.object sixx.id="610" sixx.type="Point" >1490@520</sixx.object>
+					<sixx.object sixx.id="611" sixx.type="Point" >1490@630</sixx.object>
+					<sixx.object sixx.id="612" sixx.type="Point" >1490@680</sixx.object>
+					<sixx.object sixx.id="613" sixx.type="Point" >1490@730</sixx.object>
+					<sixx.object sixx.id="614" sixx.type="Point" >1430@730</sixx.object>
+					<sixx.object sixx.id="615" sixx.type="Point" >1370@730</sixx.object>
+					<sixx.object sixx.id="616" sixx.type="Point" >1315@730</sixx.object>
+				</sixx.object>
+			</sixx.object>
+			<sixx.object sixx.id="617" sixx.type="DaskalosElementConnection" >
+				<sixx.object sixx.name="fromSymbol" sixx.idref="389" />
+				<sixx.object sixx.name="toSymbol" sixx.idref="549" />
+			</sixx.object>
+			<sixx.object sixx.id="618" sixx.type="DaskalosElementConnection" >
+				<sixx.object sixx.name="fromSymbol" sixx.idref="476" />
+				<sixx.object sixx.name="toSymbol" sixx.idref="294" />
+			</sixx.object>
+			<sixx.object sixx.id="619" sixx.type="DaskalosElementConnection" >
+				<sixx.object sixx.name="fromSymbol" sixx.idref="424" />
+				<sixx.object sixx.name="toSymbol" sixx.idref="538" />
+			</sixx.object>
+			<sixx.object sixx.id="620" sixx.type="DaskalosElementConnection" >
+				<sixx.object sixx.name="fromSymbol" sixx.idref="452" />
+				<sixx.object sixx.name="toSymbol" sixx.idref="349" />
+			</sixx.object>
+			<sixx.object sixx.id="621" sixx.type="DaskalosCompositionConnection" >
+				<sixx.object sixx.name="fromSymbol" sixx.idref="360" />
+				<sixx.object sixx.name="toSymbol" sixx.idref="424" />
+				<sixx.object sixx.id="622" sixx.name="name" sixx.type="String" >vyucujici</sixx.object>
+				<sixx.object sixx.name="cardinality" sixx.idref="420" />
+				<sixx.object sixx.name="stereotype" sixx.idref="421" />
+				<sixx.object sixx.id="623" sixx.name="fromPoint" sixx.type="Point" >860@180</sixx.object>
+				<sixx.object sixx.id="624" sixx.name="toPoint" sixx.type="Point" >1200@680</sixx.object>
+				<sixx.object sixx.id="625" sixx.name="controlPoints" sixx.type="List" >
+					<sixx.object sixx.id="626" sixx.type="Point" >860@275</sixx.object>
+					<sixx.object sixx.id="627" sixx.type="Point" >860@370</sixx.object>
+					<sixx.object sixx.id="628" sixx.type="Point" >1030@370</sixx.object>
+					<sixx.object sixx.id="629" sixx.type="Point" >1200@370</sixx.object>
+					<sixx.object sixx.id="630" sixx.type="Point" >1200@525</sixx.object>
+				</sixx.object>
+			</sixx.object>
+			<sixx.object sixx.id="631" sixx.type="DaskalosElementConnection" >
+				<sixx.object sixx.name="fromSymbol" sixx.idref="389" />
+				<sixx.object sixx.name="toSymbol" sixx.idref="527" />
+			</sixx.object>
+			<sixx.object sixx.id="632" sixx.type="DaskalosElementConnection" >
+				<sixx.object sixx.name="fromSymbol" sixx.idref="389" />
+				<sixx.object sixx.name="toSymbol" sixx.idref="338" />
+			</sixx.object>
+			<sixx.object sixx.id="633" sixx.type="DaskalosElementConnection" >
+				<sixx.object sixx.name="fromSymbol" sixx.idref="389" />
+				<sixx.object sixx.name="toSymbol" sixx.idref="283" />
+			</sixx.object>
+			<sixx.object sixx.id="634" sixx.type="DaskalosElementConnection" >
+				<sixx.object sixx.name="fromSymbol" sixx.idref="389" />
+				<sixx.object sixx.name="toSymbol" sixx.idref="571" />
+			</sixx.object>
+			<sixx.object sixx.id="635" sixx.type="DaskalosElementConnection" >
+				<sixx.object sixx.name="fromSymbol" sixx.idref="389" />
+				<sixx.object sixx.name="toSymbol" sixx.idref="316" />
+			</sixx.object>
+			<sixx.object sixx.id="636" sixx.type="DaskalosCompositionConnection" >
+				<sixx.object sixx.name="fromSymbol" sixx.idref="452" />
+				<sixx.object sixx.name="toSymbol" sixx.idref="476" />
+				<sixx.object sixx.id="637" sixx.name="name" sixx.type="String" >predmet</sixx.object>
+				<sixx.object sixx.name="cardinality" sixx.idref="420" />
+				<sixx.object sixx.name="stereotype" sixx.idref="421" />
+				<sixx.object sixx.id="638" sixx.name="fromPoint" sixx.type="Point" >1450@410</sixx.object>
+				<sixx.object sixx.id="639" sixx.name="toPoint" sixx.type="Point" >880@650</sixx.object>
+				<sixx.object sixx.id="640" sixx.name="controlPoints" sixx.type="List" >
+					<sixx.object sixx.id="641" sixx.type="Point" >1450@480</sixx.object>
+					<sixx.object sixx.id="642" sixx.type="Point" >1450@550</sixx.object>
+					<sixx.object sixx.id="643" sixx.type="Point" >1390@550</sixx.object>
+					<sixx.object sixx.id="644" sixx.type="Point" >1330@550</sixx.object>
+					<sixx.object sixx.id="645" sixx.type="Point" >1105@550</sixx.object>
+					<sixx.object sixx.id="646" sixx.type="Point" >880@550</sixx.object>
+					<sixx.object sixx.id="647" sixx.type="Point" >880@600</sixx.object>
+				</sixx.object>
+			</sixx.object>
+			<sixx.object sixx.id="648" sixx.type="DaskalosElementConnection" >
+				<sixx.object sixx.name="fromSymbol" sixx.idref="360" />
+				<sixx.object sixx.name="toSymbol" sixx.idref="305" />
+			</sixx.object>
+			<sixx.object sixx.id="649" sixx.type="DaskalosCompositionConnection" >
+				<sixx.object sixx.name="fromSymbol" sixx.idref="360" />
+				<sixx.object sixx.name="toSymbol" sixx.idref="452" />
+				<sixx.object sixx.id="650" sixx.name="name" sixx.type="String" >cvic</sixx.object>
+				<sixx.object sixx.name="cardinality" sixx.idref="420" />
+				<sixx.object sixx.name="stereotype" sixx.idref="421" />
+				<sixx.object sixx.id="651" sixx.name="fromPoint" sixx.type="Point" >900@170</sixx.object>
+				<sixx.object sixx.id="652" sixx.name="toPoint" sixx.type="Point" >1420@280</sixx.object>
+				<sixx.object sixx.id="653" sixx.name="controlPoints" sixx.type="List" >
+					<sixx.object sixx.id="654" sixx.type="Point" >1105@170</sixx.object>
+					<sixx.object sixx.id="655" sixx.type="Point" >1310@170</sixx.object>
+					<sixx.object sixx.id="656" sixx.type="Point" >1310@225</sixx.object>
+					<sixx.object sixx.id="657" sixx.type="Point" >1310@280</sixx.object>
+					<sixx.object sixx.id="658" sixx.type="Point" >1365@280</sixx.object>
+				</sixx.object>
+			</sixx.object>
+			<sixx.object sixx.id="659" sixx.type="DaskalosElementConnection" >
+				<sixx.object sixx.name="fromSymbol" sixx.idref="389" />
+				<sixx.object sixx.name="toSymbol" sixx.idref="560" />
+			</sixx.object>
+			<sixx.object sixx.id="660" sixx.type="DaskalosElementConnection" >
+				<sixx.object sixx.name="fromSymbol" sixx.idref="389" />
+				<sixx.object sixx.name="toSymbol" sixx.idref="516" />
+			</sixx.object>
+		</sixx.object>
+	</sixx.object>
+</sixx>
